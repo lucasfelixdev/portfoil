@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta  name='viewport'  content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Orcamento - Félix</title>
+    <link rel="icon" href="./svg/icon-squad-lucas_1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style/orcamento.css"><link
+ 
+  />
+</head>
+<body>
+    <div class="calculo__pagamento">
+        <div class="input">
+                <label for="valor">Valor do pagamento</label>
+                <label for="valor">R$</label>
+                <input  id="amount" type="text" name="valor" value="750,00">
+            </div>
+
+            <div class="juros">
+                <p>Parcelas</p>
+                <div class="setas">
+                    <img src="./svg/taxa/left-arrow.svg" id="decrease" alt="">
+                    <div class="detalhes__juros">
+                        <p id="display"></p>
+                    </div>
+                    <img src="./svg/taxa/right-arrow.svg" id="increase" alt="">
+                </div>
+            </div>
+
+            <div class="juros">
+                <p>Valor parcela</p>
+                <p id="parcela"></p>
+            </div>
+
+        <div class="resultado__calculo">
+            <div class="texts">
+                <h1>Você paga:</h1>
+                <p id="finalAmount">R$ 00,0</p>
+                <div class="line"></div>
+                <p>** Taxas com base nos juros da InfinitePay - InfiniteTap </p>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script/taxa.js"></script>
+</body>
+</html>

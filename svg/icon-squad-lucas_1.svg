@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 999.9 1000.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_2691);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Gradiente_sem_nome_2691-3);
+      }
+
+      .cls-3 {
+        fill: url(#Gradiente_sem_nome_2691-2);
+      }
+
+      .cls-4 {
+        fill: #111;
+      }
+    </style>
+    <linearGradient id="Gradiente_sem_nome_2691" data-name="Gradiente sem nome 2691" x1="313.07" y1="406.6" x2="686.69" y2="406.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#10737a"/>
+      <stop offset="1" stop-color="#00f0c8"/>
+    </linearGradient>
+    <linearGradient id="Gradiente_sem_nome_2691-2" data-name="Gradiente sem nome 2691" x1="126.26" y1="499.99" x2="873.5" y2="499.99" xlink:href="#Gradiente_sem_nome_2691"/>
+    <linearGradient id="Gradiente_sem_nome_2691-3" data-name="Gradiente sem nome 2691" x1="686.69" y1="453.35" x2="686.8" y2="453.35" xlink:href="#Gradiente_sem_nome_2691"/>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <rect class="cls-4" y="0" width="999.9" height="1000.51" rx="217.49" ry="217.49"/>
+      <g>
+        <path class="cls-1" d="M682.04,359.89h-364.32c-2.57,0-4.65,2.08-4.65,4.65v84.1c0,2.57,2.08,4.65,4.65,4.65h275.56s93.42.01,93.42.01v-88.76c0-2.57-2.08-4.65-4.65-4.65Z"/>
+        <path class="cls-3" d="M780.1,184.24v491.05c0,32.14-26.06,58.2-58.2,58.2h-315.43v-93.4h280.23v-186.69l-93.44,93.29h-275.54c-2.57,0-4.65,2.08-4.65,4.65v182.15h-16.92c-42.24,0-76.49-34.24-76.49-76.49v-390.54h462.38c2.57,0,4.65-2.08,4.65-4.65v-84.1c0-2.57-2.08-4.65-4.65-4.65H220.79c-1.23,0-2.42.49-3.29,1.36l-89.87,89.87c-.87.87-1.36,2.06-1.36,3.29v466.47c0,1.23.49,2.42,1.36,3.29l88.21,88.21c.87.87,2.06,1.36,3.29,1.36h561.3c1.23,0,2.42-.49,3.29-1.36l88.42-88.42c.87-.87,1.36-2.06,1.36-3.29v-466.02c0-1.24-.49-2.43-1.37-3.3l-84.1-83.58c-2.93-2.92-7.93-.84-7.93,3.3Z"/>
+        <polygon class="cls-2" points="686.8 453.3 686.69 453.3 686.69 453.4 686.8 453.3"/>
+      </g>
+    </g>
+  </g>
+</svg>
