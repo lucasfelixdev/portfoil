@@ -112,7 +112,7 @@ span{color: var(--spanColor) !important; font-weight: 800;}
     height: 1px;
     background: linear-gradient(90deg, rgba(74, 74, 74, 0.00) 0%, #B0B0B0 49.9%, rgba(74, 74, 74, 0.00) 100%);}
 
-main{width: 100%; height: 100%; display: flex; flex-direction: column; row-gap: 100px;}
+main{width: 100%; height: 100%; display: flex; flex-direction: column; row-gap: 100px; padding: 0 0 100px 0;}
 
 article{
     display: flex;
