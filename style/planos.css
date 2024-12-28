@@ -244,3 +244,135 @@ li{ display: flex; justify-content: space-between; font-size: 14px;}
     justify-content: center;
     box-sizing: border-box;
 }
+.s-drone{
+    padding: 100px 0 105px 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.desconto-anim{    
+    top: -118%;
+    left: -4px;
+    z-index: 0;
+    position: absolute;
+    height: 355px;
+    width: 355px;
+}
+
+.circle-desconto::before{
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.00) 6.48%, #0A0A0A 42.06%);
+    position: absolute; /* Adiciona posicionamento absoluto */
+    bottom: 0; /* Posiciona na parte inferior do elemento pai */
+
+}
+
+.circle-desconto::after{
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 168px;
+    background: rgb(10, 10, 10);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 1) 42%, rgba(10, 10, 10, 0) 83%);
+    position: absolute;
+    top: 29%;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.girar-infinito {
+    animation: loading 18s linear infinite; /* Controle o tempo de giro, mudando o numero. */
+}
+
+.s-drone-container{width: 85%; max-width: 350px; margin: 0 auto; height: 100px; position: relative; z-index: 99;}
+
+.s-drone_bloco{
+    z-index: 99;
+    position: relative;
+    box-sizing: border-box;
+    padding: 13px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 350px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 5.093px;
+    border: 0.424px solid #CA84FF;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, #A539FF 25.4%, #d29fff 49.4%, #A539FF 71.4%, #22003E 100%);
+    box-shadow: 0px 1.698px 1.698px 0px rgba(0, 0, 0, 0.25);
+}
+
+.s-drone_bloco h3{
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 117%; /* 14.485px */
+    letter-spacing: -0.743px;
+}
+
+.s-drone_bloco .selo{width:70px}
+
+.valor_s-drone_bloco{
+    display: flex;
+    color: #591890;
+    width: 159px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #D29EFF;
+    background: #FFF;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.valor_s-drone_bloco strong{
+    color: #591890;
+    font-weight: 800;
+    line-height: 115%; /* 12.378px */
+    letter-spacing: -0.646px;
+    font-size: 16px;
+}
+
+
+.valor_s-drone_bloco span{font-size: 25px!important;
+    color: #591890!important;
+    font-weight: 800!important;
+  }
+
+  .oferta-drone{
+    top: -22px;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    color: #D29DFF;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 73%;
+    text-decoration: line-through;
+  }
+  footer{
+
+    width:100%;
+    height: 7.925px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, #A539FF 25.4%, #D8AAFF 49.4%, #A539FF 71.4%, rgba(0, 0, 0, 0.00) 100%);
+  }
