@@ -3,146 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio // Lucas Félix</title>
-    <script src="https://cdn.counter.dev/script.js" data-id="8ae347fd-36c0-4279-a7a5-8fe465645b5b" data-utcoffset="-3"></script>
-    <link rel="icon" href="./svg/icon-squad-lucas_1.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./style/estilo.css">
-     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
-  />
+    <title>lucasfelixdev | home</title>
+    <link rel="icon" href="./svg/fav.svg" type="image/x-icon">
+
+    <!-- TW Elements CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            corePlugins: {
+                preflight: false, // Desativa estilos padrão do Tailwind se necessário
+            },
+        };
+    </script>
 </head>
+
 <body>
-    <header>
-        <div class="header__Container">
-            <div class="container__nav">
-                <img class="logo__nav"  src="./svg/lucaslofo.svg" alt="logo do site">
-                
-                <div class="container__responsividade">
-                    <div class="menu-toggle" id="menu-burguer">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                    </div>
-                    
-                    <nav>
-                        <ul class="nav__items">
-                            <li style="animation: 0.5s ease 0.3s 1 normal forwards running navLinkFade;"><a  href="#s-home">Home</a></li>
-                            <li style="animation: 0.5s ease 0.442857s 1 normal forwards running navLinkFade;"><a  href="#s-about">Sobre</a></li>
-                            <li style="animation: 0.5s ease 0.642857s 1 normal forwards running navLinkFade;"><a  href="#s-projects">Projetos</a></li>
-                            <li style="animation: 0.5s ease 0.842857s 1 normal forwards running navLinkFade;"><a  href="#">Skills</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+       <header>
+        <div class="header__article grid-content">
+            <article class="header__texts">
+                <h1>
+                    <span>Seu site, sua vitrine!</span>
+                    páginas de alta 
+                    performance para 
+                    gerar mais leads 
+                    e vendas.
+                </h1>
+    
+                <p>
+                    Projetos com <span>UX/UI estratégicos</span>, para que seu cliente tenha uma experiência incrível de navegação!
+                </p>
+                <a href="#">Entrar em contato</a>
+            </article>
         </div>
     </header>
+    <div class="divisor"></div>
     <main>
-        <section id="s-home">
-            <div class="s-grid__container">
-                <div class="container__home">
-                    <img class="diamond d1" src="./img/header/diamond01.png" alt="">
-                    <img class="diamond d2" src="./img/header/diamond02.png" alt="">
-                    <img class="diamond d3" src="./img/header/diamond03.png" alt="">
-                    <div class="s-home__container-text">
-                        <h1>Cada projeto é uma jornada onde <span>transformo ideias em realidades</span> digitais, explorando os limites da tecnologia.</h1>
-                        <p class="paragrafo">Meus projetos não são apenas códigos; são narrativas digitais que contam histórias de superação, criatividade e excelência técnica</p>
+        <div class="s-servico">
+            <div class="s-servico__text-title">
+                <div class="s-servico__svg">
+                    <div class="element-blur">
+                        <img class="starmobile" src="./svg/starmobile.png" alt="estrela icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none">
+                            <foreignObject x="-19.1081" y="-19.1093" width="112.229" height="112.229"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(9.57px);clip-path:url(#bgblur_0_75_30_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_ii_75_30)" data-figma-bg-blur-radius="19.1484">
+                              <path d="M38.9461 72.5644C44.1183 56.6783 56.6794 44.2095 72.5656 38.9449C73.6739 38.5755 74.2281 37.3748 73.8586 36.3588C73.6739 35.7123 73.2121 35.2505 72.5656 35.0658C56.5871 29.8935 44.1183 17.4247 38.9461 1.44623C38.5766 0.337889 37.3759 -0.216279 36.3599 0.153167C35.7134 0.337889 35.2516 0.799696 35.0669 1.44623C29.8023 17.4247 17.3335 29.8935 1.44735 35.0658C0.339019 35.4352 -0.215149 36.6359 0.154296 37.6519C0.339019 38.2984 0.800825 38.7602 1.44735 38.9449C17.3335 44.1172 29.8023 56.5859 35.0669 72.5644C35.4363 73.6728 36.637 74.227 37.653 73.8575C38.2072 73.6728 38.669 73.211 38.9461 72.5644Z" fill="white" fill-opacity="0.03"/>
+                            </g>
+                            <defs>
+                              <filter id="filter0_ii_75_30" x="-19.1081" y="-19.1093" width="112.229" height="112.229" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dy="0.890625"/>
+                                <feGaussianBlur stdDeviation="0.445312"/>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_75_30"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="7.57031"/>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0"/>
+                                <feBlend mode="normal" in2="effect1_innerShadow_75_30" result="effect2_innerShadow_75_30"/>
+                              </filter>
+                              <clipPath id="bgblur_0_75_30_clip_path" transform="translate(19.1081 19.1093)"><path d="M38.9461 72.5644C44.1183 56.6783 56.6794 44.2095 72.5656 38.9449C73.6739 38.5755 74.2281 37.3748 73.8586 36.3588C73.6739 35.7123 73.2121 35.2505 72.5656 35.0658C56.5871 29.8935 44.1183 17.4247 38.9461 1.44623C38.5766 0.337889 37.3759 -0.216279 36.3599 0.153167C35.7134 0.337889 35.2516 0.799696 35.0669 1.44623C29.8023 17.4247 17.3335 29.8935 1.44735 35.0658C0.339019 35.4352 -0.215149 36.6359 0.154296 37.6519C0.339019 38.2984 0.800825 38.7602 1.44735 38.9449C17.3335 44.1172 29.8023 56.5859 35.0669 72.5644C35.4363 73.6728 36.637 74.227 37.653 73.8575C38.2072 73.6728 38.669 73.211 38.9461 72.5644Z"/>
+                            </clipPath></defs>
+                          </svg>
                     </div>
-                    <div class="logoStroke">
-                        <img src="./img/header-icon3D.png" alt="LogoTraçado">
-                    </div>
-                </div>    
-            </div>
-        </section>
+                    <div class="tracado-blur">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 114 114" fill="none">
+                            <path d="M80.0449 65.0737C74.1229 69.015 69.0463 74.1086 65.1472 80.045" stroke="#A03EF2" stroke-width="13.3594" stroke-linecap="round"/>
+                        </svg>
 
-        <section id="s-about">
-            <div class="s-grid__container">
-                <div>
-                    <div class="s-about__img"></div>
-                    <div class="s-about__infos">
-                        <h4>Quem sou eu</h4>
-                        <h2>Lucas Félix</h2>
-                        <h3>FrontEnd and BackEnd Developer </h3>
-                        <p>Meu nome é Lucas Félix, formado em ADS pela universidade UNIFIP Patos/Pb. Diretor e CEO da ariseo agency e estou envolvido em constantes projetos como Frontend Developer e UI Designer. <br><br>Desenvolvo interfaces modernas e de alta qualidade, concentrado em performance, animações, responsividade e SEO.
+                    </div>
+
+
+
+                </div>
+                <h1>SERVIÇOS</h1>
+            </div>
+            <div class="s-servico__itens grid-content">
+
+                <div class="s-servico__itens-card">
+                    <div class="border-card"></div>
+
+                    <div class="s-servico__card">
+                        <h2>Sites &<br>Landing Pages</h2>
+                        <p>Ter uma página de alto padrão, com UX e UI estratégico, fará toda diferença na apresentação da sua oferta e serviços.
+
                         </p>
 
-                        <nav class="s-about__iconsSocial">   
-                            <ul>
-                                <a href="https://www.instagram.com/lukasfelix___/" target="_blank">
-                                    <li><img src="./svg/instagram-logo.svg" alt=""></li>
-                                </a>
-                                <a href="https://github.com/lucasfelixdev" target="_blank">
-                                    <li><img src="./svg/github-logo.svg" alt=""></li>
-                                </a>
-                                <a href="https://www.linkedin.com/in/lukasfelixdev " target="_blank">
-                                    <li><img src="./svg/linkedin-logo.svg" alt=""></li>
-                                </a>
-                                <a href="https://www.behance.net/lucasfelixdev" target="_blank">
-                                    <li><img src="./svg/behance-logo.svg" alt=""></li>
-                                </a>
+                        <div class="s-servico__img">
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <p>Dar uma olhada!</p>
+                                <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="s-servico__itens-card">
+                    <div class="border-card"></div>
+
+                    <div class="s-servico__card">
+                        <h2>Branding &<br>ID visual</h2>
+                        <p>Uma identidade visual de impacto constrói confiança e cria uma conexão verdadeira com seu público. 
+
+                        </p>
+
+                        <div class="s-servico__img">
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <p>Dar uma olhada!</p>
+                                <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="s-servico__itens-card">
+                    <div class="border-card"></div>
+
+                    <div class="s-servico__card">
+                        <h2>Social Media<br>& Criativos</h2>
+                        <p>Marcas que investem em criativos de qualidade no digital aumentam o engajamento e fidelizam clientes. Seu feed é a vitrine da marca – faça ele brilhar com design consistente e atraente.
+
+                        </p>
+
+                        <div class="s-servico__img">
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <p>Dar uma olhada!</p>
+                                <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+               
+              
+             
+            </div>
+            
+        </div>
+
+        <div class="s-about grid-content">
+           
+                <h2>about me</h2>
+                <div class="s-about__title">
+                    <p>lucasfélix</p>
+                </div>
+                <div class="s-about__tabs flex max-sm:flex-col">
+                    <!-- Tabs navigation -->
+                    <ul class="flex-inline flex-row justify-items-start max-md:flex max-md:justify-center" id="tabList" role="tablist">
+                        <li class="mr-1">
+                            <button class="tab-button px-6 max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold focus:bg-purple-900/10 active:bg-purple-900/10" 
+                                data-tab="tab-home">
+                                Resume
+                            </button>
+                        </li>
+                        <li class="mr-1">
+                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold"
+                                data-tab="tab-profile">
+                                Experience
+                            </button>
+                        </li>
+                        <li class="mr-1">
+                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold"
+                                data-tab="tab-messages">
+                                Education
+                            </button>
+                        </li>
+                    </ul>
+        
+                    <!-- Tabs content -->
+                    <div class="mt-4 max-sm:mt-32 w-full pl-20 max-sm:pl-1 box-border text-2xl">
+                        <div class="tab-content" id="tab-home">
+                            <p>Sobre mim</p> 
+                            <p class="text-gray-300">Desenvolvedor Full Stack, designer e empresário com mais de 6 anos de experiência em identidade visual e branding. Formado em Análise e Desenvolvimento de Sistemas pela UNIFIP, atuo no desenvolvimento web, UX/UI e microssistemas.</p>
+                        </div>
+                        <div class="tab-content hidden" id="tab-profile">
+                            <p>Estágio em Desenvolvimento 
+                                Web | 2023 - 2024</p> 
+                            <p class="text-gray-300">Atuei no desenvolvimento completo da interface (UX/UI) do projeto, criando telas responsivas em HTML, CSS e JavaScript dentro do template nativo do Django. No back-end, implementei autenticação via JWT, roteamento eficiente, filtros avançados e práticas de segurança para otimizar a performance e integridade do sistema.</p>
+                                <br>
+                            <p>Desenvolvimento WEB | NOW</p> 
+                            <p class="text-gray-300">Atuo como UX/UI Designer e Desenvolvedor Full Stack, oferecendo soluções em microssistemas, SaaS, Landing Pages e websites focados em performance e resultados para meus clientes.</p>
+                        </div>
+                        <div class="tab-content hidden" id="tab-messages">
+                            <p>ADS UNIFIP | 2022 - 2024</p> 
+                            <p class="text-gray-300">Tecnólogo em analise de sistemas pela UNIFIP em patos/PB</p>
+                            <br>
+                            <p>Cursos e Mentorias</p>
+                            <ul class="text-gray-300 list-disc" >
+                                <li>Curso Web Frontend Fundamentos: HTML, CSS e JS</li>
+                                <li>NLW Journey - Reactjs</li>
+                                <li>SPRING BOOT 3: APLIQUE BOAS PRÁTICAS E PROTEJA UMA API REST</li>
+                                <li>React do zero a maestria</li>
                             </ul>
-                        </nav>
-
-                    </div>
-                    </div>        
-                </div>
-        </section>
-
-        <section id="s-projects">
-            <div class="s-grid__container">
-                <h2>Projetos<span>.</span></h2>
-                <div id="projects">
-                    <article style="animation-delay: 2s;" class="ArticleClass patinhasfelizes card-top">
-                        <h3>Patinhas Felizes</h3>
-                        <p>Landing page para Ong de adoção de pets com PDC.</p>
-                        <a href="https://lucasfelixdev.github.io/patinhasfelizes/" target="_blank">Visualizar Projeto</a>
-                    </article>
-
-                    <article class="ArticleClass construtoraNiemaia card-top1">
-                        <h3>Construtora Niemaia</h3>
-                        <p>Site Institucional da construtura Niemaia. Feito com CSS, HTML e JS</p>
-                        <a href="https://lucasfelixdev.github.io/construtoraNiemaia/" target="_blank">Visualizar Projeto</a>
-                    </article>
-
-                    <article class="ArticleClass BritoSimoes card-top2">
-                        <h3>Brito Simões Advocacia</h3>
-                        <p>Site institucional de advocacia, feito em HTML, CSS e JavaScript.</p>
-                        <a href="https://lucasfelixdev.github.io/advSite/" target="_blank">Visualizar Projeto</a>
-                    </article>
-
-                    <article class="ArticleClass BritoSimoes card-top2">
-                        <h3>Engepride</h3>
-                        <p>Landing page para serviços de energia solar e produção de equipamentos para carros elétricos. Feito usando CSS, HTML e JS</p>
-                        <a href="https://engepride.com.br" target="_blank">Visualizar Projeto</a>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="s-services">
-            <div class="s-grid__container"></div>
-        </section>
-
-        <!-- <section id="s-skills">
-            <div class="s-grid__container">
-                <div class="skills">
-                    <article class="skill-text">
-                        <h2>Conhecimentos<span>.</span></h2>
-                        <p class="changeDescription">passe o cursor do mouse no card para ler*</p>
-                    </article>
-                    <div class="skill-icons">
-                        <article></article>
+                            <br>
+                            <p class="text-gray-300">E em constante estudos e evolução...</p>
+                        </div>
                     </div>
                 </div>
+        </div>
+        <div class="divisor"></div>
+        <div class="s-tech grid-content">
+            <div class="s-tech__titleReveal">
+                <h1>TECNOLOGIAS</h1>
+                <p class="s-tech__revealText">*passe o cursor do mouse no card para ler*</p>
             </div>
-        </section> -->
 
+            <div class="s-tech__skillIcons">
+                <div class="s-tech__skillIcons-icon css">
+                    <img src="./img/icons-skill/css.svg" alt="css ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon html">
+                    <img src="./img/icons-skill/html.svg" alt="html ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon js">
+                    <img src="./img/icons-skill/js.svg" alt="JavaScript ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon react">
+                    <img src="./img/icons-skill/react.svg" alt="React ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon tailwind">
+                    <img src="./img/icons-skill/tailwid.svg" alt="tailwind ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon  next">
+                    <img src="./img/icons-skill/next.svg" alt="Next ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon typescript">
+                    <img src="./img/icons-skill/ts.svg" alt="TypeScript ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon sass">
+                    <img src="./img/icons-skill/sass.svg" alt="Sass ícone">
+                </div>
+                <div class="s-tech__skillIcons-icon django">
+                    <img src="./img/icons-skill/django.svg" alt="Django pyhon ícone">
+                </div>
+            </div>
+
+        </div>
+        <div class="divisor"></div>
+          
     </main>
 
-    <script src="./script/responsive.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./script/reveal.js" defer></script>
-    <script src="./script/changeText.js"></script>
+   
+    <script>
+    
+        document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll(".tab-button");
+        const contents = document.querySelectorAll(".tab-content");
+
+        function activateTab(tabId) {
+            contents.forEach(content => content.classList.add("hidden"));
+            tabs.forEach(tab => tab.classList.remove("border-purple-600"));
+            tabs.forEach(tab => tab.classList.remove("bg-purple-900/10"));
+
+            document.getElementById(tabId).classList.remove("hidden");
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add("border-purple-600");
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add("bg-purple-900/10");
+            
+        }
+
+        // Ativar a primeira aba por padrão
+        if (tabs.length > 0) {
+            activateTab(tabs[0].getAttribute("data-tab"));
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", function (event) {
+                event.preventDefault();  // Impede o movimento da página
+                const tabId = this.getAttribute("data-tab");
+                activateTab(tabId);
+            });
+        });
+    });
+
+
+    </script>
+     <script src="./script/changeText.js"></script>
 </body>
 </html>
