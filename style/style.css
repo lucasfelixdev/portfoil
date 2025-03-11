@@ -584,7 +584,8 @@ header article a{
         .s-about > h2{bottom: -153px; filter: blur(2px); line-height: 90px; line-height: 90px;}
         .border-card{background:  radial-gradient(177% 300% at var(--4-x-position) var(--4-y-position), #ae00ff 0%, transparent), radial-gradient(224% 133% at var(--5-x-position) var(--5-y-position), #10052f 0%, transparent), #371c8e;}
         .s-servico{ background-size: 190%;background-position-y: -16%;}
-        .s-servico__text-title{ flex-direction: column; align-items: center; &.s-servico__text-title h1{font-size: 25px;}}
+        .s-servico__text-title{ flex-direction: column; align-items: center;}
+        .s-servico__text-title h1{font-size: 25px;}
         .s-servico__itens{flex-wrap: wrap; justify-content: center; row-gap: 40px;}
         .element-blur svg, .tracado-blur {display: none;}
         .starmobile{ display: block; height: 47px; width: 47px;}
@@ -601,7 +602,7 @@ header article a{
         .s-contact--gradient{    background: radial-gradient(204.14% 219.85% at 48.03% -54.86%, rgb(10 10 10) 60.5%, #A633FF 69%, #ffebff 77%);}
         .s-contact__line {width: 290px; height: 282px;}
         .s-contact__social-icons-ico{gap: 6px;}
-    }    
+        }
     @media (max-width: 500px){ header{height: 900px; padding: 0 0 90px 0;}}
   
 
