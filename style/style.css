@@ -418,6 +418,7 @@ header article a{
     flex-direction: column;
     align-items: center; }
    .s-contact h1{ 
+    
         position: relative;z-index: 99;
         text-transform: uppercase;
         color: transparent;
@@ -425,7 +426,7 @@ header article a{
         font-size: 31px;
         font-style: normal;
         font-weight: 800;
-        line-height: normal;
+        line-height: 28px;
         letter-spacing: 4.12px;
         background: linear-gradient(180deg, #FFF 12%, rgb(24 0 43 / 90%) 96%);
         background-clip: text;
@@ -449,9 +450,10 @@ header article a{
         z-index: 90;
         padding: 0;
         position: absolute;
-        width: 370px;
+        width: 350px;
         height: 300px;
-        background-color: rgb(30, 10, 40); /* Apenas para teste, remova depois */
+        background: rgb(10,10,10);
+        background:linear-gradient(180deg, rgba(10, 10, 10, 1) 18%, rgb(29 29 29 / 57%) 48%, rgba(10, 10, 10, 1) 76%);
         
         -webkit-mask-image: url('../svg/s-contact-line.svg');
         mask-image: url('../svg/s-contact-line.svg');
@@ -497,31 +499,32 @@ header article a{
         }
         
 
-    .s-contact__social-icons-ico{gap: 22px;
+    .s-contact__social-icons-ico{gap: 21px;
         display: flex;
         justify-content: center;}    
     .s-contact__social-icons-ico img{
         position: relative;
         z-index: 99;
         display: flex;
-        height: 70px;
-        width: 70px;
+        height: 64px;
+        width: 64px;
         padding: 15px;
         align-items: flex-start;
         gap: 28.542px;
         border-radius: 20px;
+        backdrop-filter: blur(5px);
     }
     .linkedi{
         border: 2px solid #00baff4f;
         background: linear-gradient(135deg, rgba(248, 251, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
         box-shadow: 0px 0px 22.834px 0px rgba(13, 137, 252, 0.32) inset, 22.834px 11.417px 45.667px 0px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(16px);}
+       }
 
     .whatsApp{
         border: 2px solid rgba(39, 180, 63, 0.434);
         background: linear-gradient(135deg, rgba(248, 251, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
         box-shadow: 0px 0px 22.834px 0px rgba(13, 252, 37, 0.32) inset, 22.834px 11.417px 45.667px 0px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(16px);
+    
     } 
     
     .instagram{
@@ -529,20 +532,20 @@ header article a{
         border: 2px solid #b1358a6e;
         background: linear-gradient(135deg, rgba(248, 251, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
         box-shadow: 0px 0px 22.834px 0px rgba(190, 13, 252, 0.32) inset, 22.834px 11.417px 45.667px 0px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(16px);
+    
     }
 
     .behance{
         border: 2px solid rgba(20, 96, 249, 0.32);
         background: linear-gradient(135deg, rgba(248, 251, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
         box-shadow: 0px 0px 22.834px 0px rgba(20, 96, 249, 0.32) inset, 22.834px 11.417px 45.667px 0px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(16px);
+        
     }
     .github{
         border: 2px solid rgba(211, 240, 253, 0.32);
         background: linear-gradient(135deg, rgba(248, 251, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%);
         box-shadow: 0px 0px 22.662px 0px rgba(211, 240, 253, 0.32) inset, 22.662px 11.331px 45.324px 0px rgba(0, 0, 0, 0.08);
-        backdrop-filter: blur(28.32731056213379px);
+        
     }
 
 
@@ -588,14 +591,18 @@ header article a{
         .s-tech{justify-content: center;}
         .s-tech__revealText{max-width: 300px;}
         .s-about{width: 100%;}
+        .s-contact{height: 645px;}
+        .s-contact p {font-size:15px}
         .footer-container{justify-content: center;}
         .footer-container{color: var(--WhitePure);}
         .footer-container span{color: var(--ColorSecundary);}
         .footer-container p{text-align: center;}
         .footer-container img{display: none;}
         .s-contact--gradient{    background: radial-gradient(204.14% 219.85% at 48.03% -54.86%, rgb(10 10 10) 60.5%, #A633FF 69%, #ffebff 77%);}
+        .s-contact__line {width: 290px; height: 282px;}
+        .s-contact__social-icons-ico{gap: 6px;}
     }    
-    @media (max-width: 500px){ header{height: 900px; padding: 0 0 100px 0;}}
+    @media (max-width: 500px){ header{height: 900px; padding: 0 0 90px 0;}}
   
 
    
