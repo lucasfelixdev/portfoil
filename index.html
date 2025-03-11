@@ -164,19 +164,20 @@
                     <!-- Tabs navigation -->
                     <ul class="flex-inline flex-row justify-items-start max-md:flex max-md:justify-center" id="tabList" role="tablist">
                         <li class="mr-1">
-                            <button class="tab-button px-6 max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold focus:bg-purple-900/10 active:bg-purple-900/10" 
+                            <button class="tab-button px-6 max-sm:px-7 py-6 text-gray-400 hover:text-gray-500 border-l-4
+                            max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold focus:bg-purple-900/10 active:bg-purple-900/10" 
                                 data-tab="tab-home">
                                 Resume
                             </button>
                         </li>
                         <li class="mr-1">
-                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold"
+                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
                                 data-tab="tab-profile">
                                 Experience
                             </button>
                         </li>
                         <li class="mr-1">
-                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-lg font-semibold"
+                            <button class="tab-button px-6 max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
                                 data-tab="tab-messages">
                                 Education
                             </button>
@@ -184,7 +185,7 @@
                     </ul>
         
                     <!-- Tabs content -->
-                    <div class="mt-4 max-sm:mt-32 w-full pl-20 max-sm:pl-1 box-border text-2xl">
+                    <div class="mt-4 max-sm:mt-16 pl-20 max-sm:px-16 box-border text-2xl max-sm:text-lg">
                         <div class="tab-content" id="tab-home">
                             <p>Sobre mim</p> 
                             <p class="text-gray-300">Desenvolvedor Full Stack, designer e empresário com mais de 6 anos de experiência em identidade visual e branding. Formado em Análise e Desenvolvimento de Sistemas pela UNIFIP, atuo no desenvolvimento web, UX/UI e microssistemas.</p>
@@ -253,42 +254,66 @@
 
         </div>
         <div class="divisor"></div>
-          
-    </main>
+        <div class="s-contact--gradient">
 
+            <div class="s-contact grid-content">  
+
+                <div class="s-contact__title-texts">
+                    <h1>Onde me Encontrar</h1>
+                    <p>Clique para abrir em nova aba</p>
+                </div> 
+
+            <div class="s-contact__anim">
+
+                <div class="s-contact__line"></div>
+ 
+                <div class="s-contact__social-icons">
+                    <div class="s-contact__social-icons-ico">
+                            <img class="linkedi" src="./svg/Social Icons/linkedin.svg" alt="icon linkedi">
+                            <img class="instagram" src="./svg/Social Icons/instagram.svg" alt="Instagram icon">
+                            <img class="whatsApp" src="./svg/Social Icons/whatsapp.svg" alt="WhatsApp icon">
+                            <img class="behance" src="./svg/Social Icons/behance.svg" alt="Behance Icon">
+                            <img class="github" src="./svg/Social Icons/github.svg" alt="Github Icon">
+                    </div>
+                </div>
+            </div>
    
-    <script>
-    
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container grid-content">
+            <p>Copyright © 2025 <span>lucasfelixdev.com.</span> Todos os direitos reservados.</p>
+             <img src="./svg/powered.svg" alt="desenvolvido por lucas félix dev">
+        </div>
+    </footer>
+   
+    <script>  
         document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll(".tab-button");
-        const contents = document.querySelectorAll(".tab-content");
+            const tabs = document.querySelectorAll(".tab-button");
+            const contents = document.querySelectorAll(".tab-content");
 
-        function activateTab(tabId) {
-            contents.forEach(content => content.classList.add("hidden"));
-            tabs.forEach(tab => tab.classList.remove("border-purple-600"));
-            tabs.forEach(tab => tab.classList.remove("bg-purple-900/10"));
+            function activateTab(tabId) {
+                contents.forEach(content => content.classList.add("hidden"));
+                tabs.forEach(tab => tab.classList.remove("border-purple-600"));
+                tabs.forEach(tab => tab.classList.remove("bg-purple-900/10"));
+                document.getElementById(tabId).classList.remove("hidden");
+                document.querySelector(`[data-tab="${tabId}"]`).classList.add("border-purple-600");
+                document.querySelector(`[data-tab="${tabId}"]`).classList.add("bg-purple-900/10");           
+            }
 
-            document.getElementById(tabId).classList.remove("hidden");
-            document.querySelector(`[data-tab="${tabId}"]`).classList.add("border-purple-600");
-            document.querySelector(`[data-tab="${tabId}"]`).classList.add("bg-purple-900/10");
-            
-        }
+            // Ativar a primeira aba por padrão
+            if (tabs.length > 0) {activateTab(tabs[0].getAttribute("data-tab"));}
 
-        // Ativar a primeira aba por padrão
-        if (tabs.length > 0) {
-            activateTab(tabs[0].getAttribute("data-tab"));
-        }
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", function (event) {
-                event.preventDefault();  // Impede o movimento da página
-                const tabId = this.getAttribute("data-tab");
-                activateTab(tabId);
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function (event) {
+                    event.preventDefault();  // Impede o movimento da página
+                    const tabId = this.getAttribute("data-tab");
+                    activateTab(tabId);
+                });
             });
         });
-    });
-
-
     </script>
      <script src="./script/changeText.js"></script>
 </body>
