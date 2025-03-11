@@ -595,7 +595,7 @@ header article a{
         .footer-container img{display: none;}
         .s-contact--gradient{    background: radial-gradient(204.14% 219.85% at 48.03% -54.86%, rgb(10 10 10) 60.5%, #A633FF 69%, #ffebff 77%);}
     }    
-    @media (max-width: 400px){ header{height: 950px; padding: 0 0 100px 0;}}
+    @media (max-width: 400px){ header{height: 890px; padding: 0 0 100px 0;}}
   
 
    
