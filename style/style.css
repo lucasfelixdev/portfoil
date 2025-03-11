@@ -560,15 +560,19 @@ header article a{
 
 
     /* //////////////////////////////// RESPONSIVIDADE MOBILE //////////////////////////////// */
-    @media (min-width: 1920px) {header{background: url(../img/header/header-ultrawide.png) no-repeat top center / cover; max-width: 100%; height: 950px; }}
-    @media (max-width: 1400px) {.s-servico__itens{    justify-content: center;}}
+   
+    @media (min-width: 1920px) {
+        header{background: url(../img/header/header-ultrawide.png) no-repeat top center / cover; max-width: 100%; height: 950px; }}
+    @media (max-width: 1400px) {
+        .s-servico__itens{    justify-content: center;}}
+
     @media (max-width: 770px) {
         .s-tech__skillIcons{display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 20px;
             grid-row-gap:  20px;}
-        header{background: url(../img/header/header-mobile.png) no-repeat top right / contain; display: flex; padding: 0 0 150px 0; align-items: flex-end; height: 902px;}
+        header{background: url(../img/header/header-mobile.png) no-repeat top right / contain; display: flex; padding: 0 0 150px 0; align-items: flex-end; height: 1050px;}
         header h1{font-size: 29px !important; width: 286px; margin: 0 auto;}
         header p {font-size: 15px; width: 100%; max-width: 286px; margin: 30px auto;}
         header article a{margin: 0 auto; max-width:286px; width: 100%; height: 53px; font-size: 20px;}
@@ -589,6 +593,12 @@ header article a{
         .footer-container span{color: var(--ColorSecundary);}
         .footer-container p{text-align: center;}
         .footer-container img{display: none;}
-    }
+        .s-contact--gradient{    background: radial-gradient(204.14% 219.85% at 48.03% -54.86%, rgb(10 10 10) 60.5%, #A633FF 69%, #ffebff 77%);}
+    }    
+    @media (max-width: 400px){ header{height: 950px; padding: 0 0 100px 0;}}
+  
+
+   
+
 
     
