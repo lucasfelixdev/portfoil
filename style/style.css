@@ -258,8 +258,11 @@ header article a{
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* row-gap: 31px; */
-    justify-content: space-between;}
+    justify-content: space-between;
+}
+.s-servico__card-texts span{color: var(--ColorSecundary);}
+
+
 .s-servico__card-texts > p{    
     width: 239px;;
     color: var(--WhiteTextSecundary);
@@ -274,7 +277,7 @@ header article a{
 }
 
 .s-servico__img{
-    border-radius: 25px;
+    border-radius: 8px;
     height: 239px;
     width: 227px;
     background-repeat: no-repeat;
