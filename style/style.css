@@ -82,7 +82,12 @@ body{
     height: 100%;
    
 }
-
+.per-cursor{
+    cursor: url("/svg/cursor/pointer.cur"), default;
+}
+a{
+    cursor: url("../svg/cursor/hand.cur"), pointer;
+}
 .grid-content{width: 82%; max-width: var(--grid-content); margin: 0 auto;}
 .divisor{
     height: 2px;
@@ -340,7 +345,21 @@ opacity: 0.1;
     @property --5-x-position { syntax: '<percentage>'; inherits: false; initial-value: 80%; }
     @property --5-y-position { syntax: '<percentage>'; inherits: false; initial-value: 20%; }
     @keyframes main { 25% {--4-x-position: 15%;--4-y-position: 15%;--5-x-position: 85%;--5-y-position: 80%;}50% {--4-x-position: 80%;--4-y-position: 15%;--5-x-position: 15%;--5-y-position: 85%;} }
-    .s-servico__itens-card{display: flex;}
+    .s-servico__itens-card{display: flex;
+        transition: 0.7s ease-in-out;
+    }
+    .s-servico__itens-card:hover{
+        transition: 0.4s ease-in-out;
+        -moz-transform: rotate(-3deg) translate(-3px, 0px);
+        -webkit-transform: rotate(-3deg) translate(-3px, 0px);
+        -o-transform: rotate(-3deg) translate(-3px, 0px);
+        -ms-transform: rotate(-3deg) translate(-3px, 0px);
+        transform: rotate(-3deg) translate(-3px, 0px);
+        & .s-servico__img a p:first-child{
+            transition: 0.4s ease-in-out;
+            transform: translateY(-130%);
+        }
+    }
     .s-servico__card{
         position: relative;
         width: 306px;
@@ -354,6 +373,7 @@ opacity: 0.1;
         align-items: center;
         justify-content: center;
 }
+
 
 .s-servico__card h2{color: #F0F0F0;
     font-size: 29.304px;
@@ -427,7 +447,9 @@ opacity: 0.1;
     padding: 6px 17px 8px;
     backdrop-filter: blur(2px);
     margin-bottom: 5px;
+    transition: 0.7s ease-in-out;
     }
+    
 
     .s-servico__img a p:last-child{
         justify-content: center;
@@ -438,11 +460,11 @@ opacity: 0.1;
         leading-trim: both;
         text-edge: cap;
         font-family: "Funnel Display";
-        font-size: 12px;
+        font-size: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: -0.322px;
+        letter-spacing: 0.100px;
     }
 
     .s-servico__img .span {
@@ -666,7 +688,19 @@ opacity: 0.1;
         gap: 28.542px;
         border-radius: 20px;
         backdrop-filter: blur(5px);
+        transition: 0.3s ease-in-out;
+        &:hover{
+            transition: 0.3s ease-in-out;
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
     }
+
+
+
     .linkedi {
     position: relative; /* Necessário para o pseudo-elemento */
     border: 2px solid #00baff4f;

@@ -134,65 +134,7 @@
         </article>
     </main>
     <script>
-        document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    });
-
-        document.addEventListener('copy', function (e) {
-        e.preventDefault();
-    });
-
-    (function() {
-    const threshold = 160;  // Tamanho mínimo do painel DevTools
-    function detectDevTools() {
-        if (window.outerWidth - window.innerWidth > threshold || 
-            window.outerHeight - window.innerHeight > threshold) {
-            window.close();  // Tenta fechar a aba
-            window.location.href = 'about:blank';  // Ou redireciona
-        }
-    }
-            setInterval(detectDevTools, 1000);
-        })();
-
-        (function() {
-    let devtoolsOpen = false;
-    const element = new Image();
-    Object.defineProperty(element, 'id', {
-        get: function() {
-            devtoolsOpen = true;
-            throw new Error('DevTools detected');
-        }
-    });
-
-    setInterval(function() {
-        devtoolsOpen = false;
-        console.log(element);  // Dispara a detecção
-        if (devtoolsOpen) {
-            window.location.href = 'about:blank';  // Ou qualquer URL que você queira
-        }
-    }, 1000);
-})();
-
-// Bloqueia clique direito
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
-// Impede seleção
-document.addEventListener('selectstart', function(e) {
-    e.preventDefault();
-});
-
-// Tenta bloquear teclas comuns (F12, Ctrl+Shift+I, Ctrl+U)
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'F12' || 
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) || 
-        (e.ctrlKey && e.key === 'u')) {
-        e.preventDefault();
-    }
-});
-
-
+  
     </script>
 </body>
 
