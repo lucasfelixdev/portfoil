@@ -74,6 +74,7 @@ html, *{
 }
 
 body{
+    overflow-x: hidden;
     font-family: "Funnel Display", sans-serif;
     background-color: var(--blackprimary);
     margin: 0 auto;
@@ -91,6 +92,43 @@ body{
 
     background: linear-gradient(128deg, rgba(10, 10, 10, 0) 10%, rgb(246, 246, 246) 53%, rgba(0, 0, 0, 0) 89%);
 }
+.cursor {
+    z-index: 0;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(35.5% 35.5% at 50% 50%, rgba(173, 66, 255, 0.671) 0%, rgba(10, 10, 10, 0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out;
+    animation-name: opacity;
+    filter: blur(20px);
+}
+.s-background{
+
+     z-index: 1;
+     background: var(--blackprimary);
+    -webkit-mask-image: url('../svg/grade-background-subtract.svg');
+    mask-image: url('../svg/grade-background-subtract.svg');
+   
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+   -webkit-mask-repeat: no-repeat;
+   mask-repeat: no-repeat;
+
+   -webkit-mask-position: center;
+   mask-position: center;
+   
+  
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+
 
 header{
     margin: 0 auto;
@@ -160,13 +198,28 @@ header article a{
 }
 
 .s-servico{
+    
+    position: relative;
     padding: 131px 0;
     margin: 0 auto;
     width: 100%;
-    background: url(../svg/grade-background.svg) no-repeat top center / contain;
-    background-position-y: -120px;
+    /* background: url(../svg/grade-background.svg) no-repeat top center / contain; */
+    /* background-position-y: -120px; */
 }
 
+.s-servico::after{
+    content: '';
+filter: blur(60px);
+opacity: 0.1;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--ColorSecundary);
+}
 .s-servico__text-title{
     padding: 0 0 70px 0;
     flex-wrap: wrap;
@@ -234,6 +287,7 @@ header article a{
     @keyframes main { 25% {--4-x-position: 15%;--4-y-position: 15%;--5-x-position: 85%;--5-y-position: 80%;}50% {--4-x-position: 80%;--4-y-position: 15%;--5-x-position: 15%;--5-y-position: 85%;} }
     .s-servico__itens-card{display: flex;}
     .s-servico__card{
+        position: relative;
         width: 306px;
         height: 476px;
         background-image: url(../svg/card.svg);
@@ -252,6 +306,8 @@ header article a{
     font-weight: 700;
     line-height: 28.361px; /* 96.782% */
     letter-spacing: -0.879px;}
+.s-servico__card h3{text-align: center; color: white; font-size: 29.304px; font-weight: 700; position: absolute; right: 1%; top: 1%;  width: 50px; padding: 0; margin-block-start: 0em;
+    margin-block-end: 0em;}
 
 .s-servico__card-texts{    
     padding: 45px 0 30px 10px;
@@ -264,7 +320,7 @@ header article a{
 
 
 .s-servico__card-texts > p{    
-    width: 239px;;
+    width: 200px;;
     color: var(--WhiteTextSecundary);
     leading-trim: both;
     text-edge: cap;
@@ -577,9 +633,11 @@ header article a{
     /* //////////////////////////////// RESPONSIVIDADE MOBILE //////////////////////////////// */
    
     @media (min-width: 1920px) {
-        header{background: url(../img/header/header-ultrawide.png) no-repeat top center / cover; max-width: 100%; height: 950px; }}
+        header{background: url(../img/header/header-ultrawide.png) no-repeat top center / cover; max-width: 100%; height: 950px; }
+        .s-contact--gradient{background: radial-gradient(106.14% 147.85% at 52.03% -15.86%, rgb(10 10 10) 57.5%, #A633FF 73.48%, #ffebff 90.5%); transition: ease-in-out 0.6s;}
+    }
     @media (max-width: 1400px) {
-        .s-servico__itens{    justify-content: center;}}
+        .s-servico__itens{justify-content: center;}}
 
     @media (max-width: 770px) {
         .s-tech__skillIcons{display: grid;
@@ -598,7 +656,9 @@ header article a{
         .s-servico{ background-size: 190%;background-position-y: -16%;}
         .s-servico__text-title{ flex-direction: column; align-items: center;}
         .s-servico__text-title h1{font-size: 25px;}
-        .s-servico__itens{flex-wrap: wrap; justify-content: center; row-gap: 40px;}
+        .s-servico__itens{flex-wrap: wrap; justify-content: center; row-gap: 40px; 
+            
+            height: 151.4vh;}
         .element-blur svg, .tracado-blur {display: none;}
         .starmobile{ display: block; height: 47px; width: 47px;}
         .s-tech{justify-content: center;}
@@ -613,8 +673,19 @@ header article a{
         .s-contact--gradient{    background: radial-gradient(204.14% 219.85% at 48.03% -54.86%, rgb(10 10 10) 60.5%, #A633FF 69%, #ffebff 77%);}
         .s-contact__line {width: 290px; height: 282px;}
         .s-contact__social-icons-ico{gap: 6px;}
+
+        /* .s-servico__itens :first-child{padding-bottom: 121px;} */
+        .ux{padding-bottom: 121px}
+        .s-servico__itens-card {
+            position: sticky;
+            display: flex;
+            -webkit-box-shadow: 0px -24px 19px -8px rgba(21,21,21,0.22);
+            -moz-box-shadow: 0px -24px 19px -8px rgba(21,21,21,0.22);
+            box-shadow: 0px -24px 19px -8px rgba(21,21,21,0.22);
+}
         }
-    @media (max-width: 500px){ header{height: 900px; padding: 0 0 90px 0;}}
+    @media (max-width: 490px){ header{height: 900px; padding: 0 0 90px 0;} .s-servico__itens{height: 202.3vh;} 
+    .branding{top: 22.1% !important;}}
   
 
    

@@ -44,8 +44,10 @@
     </header>
     <div class="divisor"></div>
     <main>
-        <div class="s-servico">
-            <div class="s-servico__text-title">
+        <div class="s-servico" id="trackingSection">
+            <div class="cursor" id="cursor"></div>
+            <div class="s-background"></div>
+            <div class="s-servico__text-title"  style="z-index: 2; position: relative;">
                 <div class="s-servico__svg">
                     <div class="element-blur">
                         <img class="starmobile" src="./svg/starmobile.png" alt="estrela icon">
@@ -86,15 +88,16 @@
                 </div>
                 <h1>SERVIÇOS</h1>
             </div>
-            <div class="s-servico__itens grid-content">
+            <div class="s-servico__itens grid-content "  style="z-index: 2; position: relative;">
 
-                <div class="s-servico__itens-card">
+                <div class="s-servico__itens-card ux" style="top: 6%;">
                     <div class="border-card"></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
+                            <h3>I</h3>
                             <h2>UX and UI <span>&</span><br>Landing Pages</h2>
-                            <p>Ter uma página de alto padrão, com UX e UI estratégico, fará toda diferença na apresentação da sua oferta e serviços.
+                            <p>Uma interface com UX e UI estratégico, fará toda diferença na apresentação da sua oferta e serviços.
     
                             </p>
     
@@ -108,13 +111,12 @@
                     </div>     
                 </div>
 
-
-
-                <div class="s-servico__itens-card">
+                <div class="s-servico__itens-card branding" style="top: 18.1%;">
                     <div class="border-card"></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
+                            <h3>II</h3>
                             <h2>Branding <span>&</span><br>ID visual</h2>
                             <p>Uma identidade visual de impacto constrói confiança e cria uma conexão verdadeira com seu público. 
     
@@ -129,12 +131,12 @@
                         </div>
                     </div>     
                 </div>
-
                 <div class="s-servico__itens-card">
                     <div class="border-card"></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
+                            <h3>III</h3>
                             <h2>Social Media<br><span>&</span> Criativos</h2>
                             <p>Marcas que investem em criativos de qualidade no digital aumentam o engajamento e fidelizam clientes. Seu feed é a vitrine da marca. 
     
@@ -324,6 +326,30 @@
                     activateTab(tabId);
                 });
             });
+        });
+
+        const section = document.getElementById('trackingSection');
+        const cursor = document.getElementById('cursor');
+
+        section.addEventListener('mousemove', (e) => {
+            const rect = section.getBoundingClientRect();
+            const cursorWidth = cursor.offsetWidth;
+            const cursorHeight = cursor.offsetHeight;
+
+            // Corrigindo posição centralizada
+            const x = e.clientX - rect.left - (cursorWidth / 2);
+            const y = e.clientY - rect.top - (cursorHeight / 2);
+
+            cursor.style.left = `${x}px`;
+            cursor.style.top = `${y}px`;
+        });
+
+        section.addEventListener('mouseenter', () => {
+            cursor.style.opacity = "1";
+        });
+
+        section.addEventListener('mouseleave', () => {
+            cursor.style.opacity = "0";
         });
     </script>
     
