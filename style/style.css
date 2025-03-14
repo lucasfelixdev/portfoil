@@ -657,7 +657,7 @@ opacity: 0.1;
         z-index: 20;
         filter: blur(8px);
         background: linear-gradient(to top, #ae00ff 10%,transparent 25%);
-        animation: LUZVERTICAL 5s cubic-bezier(0.17, 0.42, 1, -0.19) infinite;
+        animation: LUZVERTICAL 3s cubic-bezier(0.17, 0.42, 1, -0.19) infinite;
         animation-delay: 0s !important;
         }
         @keyframes LUZVERTICAL {
