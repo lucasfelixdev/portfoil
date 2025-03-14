@@ -15,19 +15,37 @@
     <!-- !-- Robots (controle de indexação) -->
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="lucasfelixdev| FronEnd | UX | UI">
-    <meta property="og:description" content="Websites rápidos e otimizados para SEO. Vamos transformar sua presença digital?">
+     <!-- Open Graph (para Facebook, LinkedIn e outros) -->
+    <meta property="og:title" content="lucasfelixdev | FronEnd | UX/UI">
+    <meta property="og:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
     <meta property="og:image" content="https://lucasfelixdev.com/img/og-img.png">
-    <meta property="og:url" content="https://lucasfelixdev.cm">
+    <meta property="og:url" content="https://lucasfelixdev.com">
     <meta property="og:type" content="website">
 
+        <!-- Twitter Cards -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="lucasfelixdev | Home">
+        <meta name="twitter:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
+        <meta name="twitter:image" content="https://lucasfelixdev.com/img/og-img.png">
 
+     <!-- Canonical (evita conteúdo duplicado) -->
+     <link rel="canonical" href="https://lucasfelixdev.com/">
     <!-- TW Elements CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
 
     <link rel="stylesheet" href="./style/style.css">
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script src="https://cdn.tailwindcss.com/3.3.0"> defer</script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0P004WG6T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B0P004WG6T');
+    </script>
 
   
     
