@@ -38,7 +38,7 @@ const distancia = '80px';   // Define distância inicial da animação.
             distance: distancia,
             origin: 'right',
             easing: 'ease-in-out',
-            delay: 50
+            delay: 10
             
     })
 
@@ -48,7 +48,7 @@ const distancia = '80px';   // Define distância inicial da animação.
                 distance: distancia,
                 origin: 'right',
                 easing: 'ease-in-out',
-                delay: 300
+                delay: 30
                 
     })
 
@@ -58,7 +58,7 @@ const distancia = '80px';   // Define distância inicial da animação.
                     distance: distancia,
                     origin: 'right',
                     easing: 'ease-in-out',
-                    delay: 600
+                    delay: 50
                     
     })
     revelar.reveal('.spotlight', 
@@ -119,4 +119,5 @@ const distancia = '80px';   // Define distância inicial da animação.
             delay: 100
             
     })
+
 

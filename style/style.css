@@ -47,6 +47,7 @@ html, *{
     font-family: "Funnel Display", sans-serif;
     padding: 0;
     margin: 0;
+
     
 }
 
@@ -72,6 +73,21 @@ html, *{
     --5-x-position: 80%
 
     --5-y-position: 20%
+}
+/* Estilizando a barra de rolagem para Chrome, Safari, e Edge */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ColorSecundary);
+    border-radius: 10px 0 0 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--blackprimary);
+    
 }
 
 body{
@@ -99,6 +115,7 @@ a{
     scale: 1;
 }
 .cursor {
+   
     z-index: 0;
     position: absolute;
     width: 300px;
@@ -119,12 +136,12 @@ a{
    
     -webkit-mask-size: cover;
     mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
 
    -webkit-mask-repeat: no-repeat;
    mask-repeat: no-repeat;
 
-   -webkit-mask-position: center;
-   mask-position: center;
    
   
    content: "";
@@ -206,24 +223,22 @@ header article a{
 }
 
 .s-servico{
-    
     position: relative;
     padding: 131px 0;
     margin: 0 auto;
     width: 100%;
-    /* background: url(../svg/grade-background.svg) no-repeat top center / contain; */
-    /* background-position-y: -120px; */
 }
 
 .s-servico::after{
+    z-index: 0;
     content: '';
-filter: blur(60px);
-opacity: 0.1;
+    filter: blur(60px);
+    opacity: 0.1;
     position: absolute;
     width: 300px;
     height: 300px;
     left: 50%;
-    top: 25%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--ColorSecundary);
@@ -507,6 +522,15 @@ opacity: 0.1;
         height: 100%;
         overflow-x: hidden !important;
     }
+
+    .s-about_container{
+        width: 100%;
+        height: 100%;
+        background-image: url(../svg/about-grade.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       background-position-y: 10em;
+    }
     .s-about > h2{
         z-index: 0;
         bottom: -103px;
@@ -779,6 +803,8 @@ opacity: 0.1;
     /* //////////////////////////////// RESPONSIVIDADE MOBILE //////////////////////////////// */
    
     @media (min-width: 1920px) {
+        .s-background{-webkit-mask-image: url('../svg/grade-background-subtract-ULTRAWIDE.svg');
+            mask-image: url('../svg/grade-background-subtract-ULTRAWIDE.svg');}
         header{background: url(../img/header/header-ultrawide.png) no-repeat top center / cover; max-width: 100%; height: 950px; }
         .s-contact--gradient{background: radial-gradient(106.14% 147.85% at 52.03% -15.86%, rgb(10 10 10) 57.5%, #A633FF 73.48%, #ffebff 90.5%); transition: ease-in-out 0.6s;}
     }
@@ -786,6 +812,11 @@ opacity: 0.1;
         .s-servico__itens{justify-content: center;}}
 
     @media (max-width: 770px) {
+        .s-background{    -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-position: top;
+            mask-position: top;}
+        .s-about_container{background-position: center bottom; background-size: contain;}
         .s-tech__skillIcons{display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -831,7 +862,7 @@ opacity: 0.1;
 }
         }
     @media (max-width: 490px){ header{height: 900px; padding: 0 0 90px 0;} .s-servico__itens{height: 202.3vh;} 
-    .branding{top: 22.1% !important;}}
+    .branding{top: 22.1% !important;} .cursor{display: none;}}
   
 
    

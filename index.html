@@ -63,7 +63,7 @@
 <body class="per-cursor">
     <div>
         <!-- disable dev tools -->
-        <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+        <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script> -->
     
     </div>
        <header>
@@ -87,10 +87,10 @@
     <div class="divisor reveal-scale"></div>
     <main>
         <div class="s-servico" id="trackingSection">
-            <div class="cursor" id="cursor"></div>
+            <div class="cursor" id="cursor""></div>
+            <div class="cursor-mobile"></div>
             <div class="s-background"></div>
-            
-            <div class="s-servico__text-title"  style="z-index: 2; position: relative;">
+            <div class="s-servico__text-title"  style="z-index: 2; position: relative;" >
                 <div class="s-servico__svg">
                     <div class="element-blur reveal-bottom">
                         <img class="starmobile" src="./svg/starmobile.png" alt="estrela icon">
@@ -134,7 +134,7 @@
             <div class="s-servico__itens grid-content "  style="z-index: 2; position: relative;">
 
                 <div class="s-servico__itens-card ux" style="top: 6%;">
-                    <div class="border-card reveal-right-delay0"></div>
+                    <div class="border-card reveal-right-delay0" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="s-servico__itens-card branding" style="top: 18.1%;">
-                    <div class="border-card reveal-right-delay1"></div>
+                    <div class="border-card reveal-right-delay1" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -175,7 +175,7 @@
                     </div>     
                 </div>
                 <div class="s-servico__itens-card">
-                    <div class="border-card reveal-right-delay2"></div>
+                    <div class="border-card reveal-right-delay2" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -210,66 +210,68 @@
             
         </div>
 
-        <div class="s-about grid-content">
-           
-                <h2 class="reveal-top">about me</h2>
-                <div class="s-about__title">
-                    <p class="reveal-bottom">lucasfélix</p>
-                </div>
-                <div class="s-about__tabs flex max-sm:flex-col">
-                    <!-- Tabs navigation -->
-                    <ul class="flex-inline flex-row justify-items-start max-md:flex max-md:justify-center" id="tabList" role="tablist">
-                        <li class="mr-1">
-                            <button class="tab-button px-6 max-sm:px-7 py-6 text-gray-400 hover:text-gray-500 border-l-4
-                            max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold focus:bg-purple-900/10 active:bg-purple-900/10" 
-                                data-tab="tab-home">
-                                Resume
-                            </button>
-                        </li>
-                        <li class="mr-1">
-                            <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
-                                data-tab="tab-profile">
-                                Experience
-                            </button>
-                        </li>
-                        <li class="mr-1">
-                            <button class="tab-button px-6 max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
-                                data-tab="tab-messages">
-                                Education
-                            </button>
-                        </li>
-                    </ul>
-        
-                    <!-- Tabs content -->
-                    <div class="mt-4 max-sm:mt-16 pl-20 max-sm:px-16 box-border text-2xl max-sm:text-lg">
-                        <div class="tab-content" id="tab-home">
-                            <p>Sobre mim</p> 
-                            <p class="text-gray-300">Desenvolvedor Full Stack, designer e empresário com mais de 6 anos de experiência em identidade visual e branding. Formado em Análise e Desenvolvimento de Sistemas pela UNIFIP, atuo no desenvolvimento web, UX/UI e microssistemas.</p>
-                        </div>
-                        <div class="tab-content hidden" id="tab-profile">
-                            <p>Estágio em Desenvolvimento 
-                                Web | 2023 - 2024</p> 
-                            <p class="text-gray-300">Atuei no desenvolvimento completo da interface (UX/UI) do projeto, criando telas responsivas em HTML, CSS e JavaScript dentro do template nativo do Django. No back-end, implementei autenticação via JWT, roteamento eficiente, filtros avançados e práticas de segurança para otimizar a performance e integridade do sistema.</p>
+        <div class="s-about_container">
+            <div class="s-about grid-content">
+               
+                    <h2 class="reveal-top">about me</h2>
+                    <div class="s-about__title">
+                        <p class="reveal-bottom">lucasfélix</p>
+                    </div>
+                    <div class="s-about__tabs flex max-sm:flex-col">
+                        <!-- Tabs navigation -->
+                        <ul class="flex-inline flex-row justify-items-start max-md:flex max-md:justify-center" id="tabList" role="tablist">
+                            <li class="mr-1">
+                                <button class="tab-button px-6 max-sm:px-7 py-6 text-gray-400 hover:text-gray-500 border-l-4
+                                max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold focus:bg-purple-900/10 active:bg-purple-900/10" 
+                                    data-tab="tab-home">
+                                    Resume
+                                </button>
+                            </li>
+                            <li class="mr-1">
+                                <button class="tab-button px-6  max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
+                                    data-tab="tab-profile">
+                                    Experience
+                                </button>
+                            </li>
+                            <li class="mr-1">
+                                <button class="tab-button px-6 max-sm:px-3 py-6 text-gray-400 hover:text-gray-500 border-l-4 max-sm:border-x-4 border-transparent focus:border-purple-600 active:border-purple-600 text-2xl max-sm:text-base font-semibold"
+                                    data-tab="tab-messages">
+                                    Education
+                                </button>
+                            </li>
+                        </ul>
+            
+                        <!-- Tabs content -->
+                        <div class="mt-4 max-sm:mt-16 pl-20 max-sm:px-16 box-border text-2xl max-sm:text-lg">
+                            <div class="tab-content" id="tab-home">
+                                <p>Sobre mim</p> 
+                                <p class="text-gray-300">Desenvolvedor Full Stack, designer e empresário com mais de 6 anos de experiência em identidade visual e branding. Formado em Análise e Desenvolvimento de Sistemas pela UNIFIP, atuo no desenvolvimento web, UX/UI e microssistemas.</p>
+                            </div>
+                            <div class="tab-content hidden" id="tab-profile">
+                                <p>Estágio em Desenvolvimento 
+                                    Web | 2023 - 2024</p> 
+                                <p class="text-gray-300">Atuei no desenvolvimento completo da interface (UX/UI) do projeto, criando telas responsivas em HTML, CSS e JavaScript dentro do template nativo do Django. No back-end, implementei autenticação via JWT, roteamento eficiente, filtros avançados e práticas de segurança para otimizar a performance e integridade do sistema.</p>
+                                    <br>
+                                <p>Desenvolvimento WEB | NOW</p> 
+                                <p class="text-gray-300">Atuo como UX/UI Designer e Desenvolvedor Full Stack, oferecendo soluções em microssistemas, SaaS, Landing Pages e websites focados em performance e resultados para meus clientes.</p>
+                            </div>
+                            <div class="tab-content hidden" id="tab-messages">
+                                <p>ADS UNIFIP | 2022 - 2024</p> 
+                                <p class="text-gray-300">Tecnólogo em analise de sistemas pela UNIFIP em patos/PB</p>
                                 <br>
-                            <p>Desenvolvimento WEB | NOW</p> 
-                            <p class="text-gray-300">Atuo como UX/UI Designer e Desenvolvedor Full Stack, oferecendo soluções em microssistemas, SaaS, Landing Pages e websites focados em performance e resultados para meus clientes.</p>
-                        </div>
-                        <div class="tab-content hidden" id="tab-messages">
-                            <p>ADS UNIFIP | 2022 - 2024</p> 
-                            <p class="text-gray-300">Tecnólogo em analise de sistemas pela UNIFIP em patos/PB</p>
-                            <br>
-                            <p>Cursos e Mentorias</p>
-                            <ul class="text-gray-300 list-disc" >
-                                <li>Curso Web Frontend Fundamentos: HTML, CSS e JS</li>
-                                <li>NLW Journey - Reactjs</li>
-                                <li>SPRING BOOT 3: APLIQUE BOAS PRÁTICAS E PROTEJA UMA API REST</li>
-                                <li>React do zero a maestria</li>
-                            </ul>
-                            <br>
-                            <p class="text-gray-300">E em constante estudos e evolução...</p>
+                                <p>Cursos e Mentorias</p>
+                                <ul class="text-gray-300 list-disc" >
+                                    <li>Curso Web Frontend Fundamentos: HTML, CSS e JS</li>
+                                    <li>NLW Journey - Reactjs</li>
+                                    <li>SPRING BOOT 3: APLIQUE BOAS PRÁTICAS E PROTEJA UMA API REST</li>
+                                    <li>React do zero a maestria</li>
+                                </ul>
+                                <br>
+                                <p class="text-gray-300">E em constante estudos e evolução...</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+            </div>
         </div>
 
         <div class="divisor reveal-scale"></div>
@@ -331,11 +333,11 @@
  
                 <div class="s-contact__social-icons">
                     <div class="s-contact__social-icons-ico">
-                            <img class="linkedi" src="./svg/Social Icons/linkedin.svg" alt="icon linkedi">
-                            <img class="instagram" src="./svg/Social Icons/instagram.svg" alt="Instagram icon">
-                            <img class="whatsApp" src="./svg/Social Icons/whatsapp.svg" alt="WhatsApp icon">
-                            <img class="behance" src="./svg/Social Icons/behance.svg" alt="Behance Icon">
-                            <img class="github" src="./svg/Social Icons/github.svg" alt="Github Icon">
+                        <a href="https://www.linkedin.com/in/lukasfelixdev/" target="_blank" rel="noopener noreferrer"><img class="linkedi" src="./svg/Social Icons/linkedin.svg" alt="icon linkedi"></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer"> <img class="instagram" src="./svg/Social Icons/instagram.svg" alt="Instagram icon"></a>
+                        <a href="https://wa.me/5581998201779?text=%5Bweb%5D%20%0A%0AOl%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20LP%2C%20Social%20Media%20e%20Branding%20que%20voc%C3%AA%20oferece." target="_blank" rel="noopener noreferrer"><img class="whatsApp" src="./svg/Social Icons/whatsapp.svg" alt="WhatsApp icon"></a>                
+                        <a href="https://www.behance.net/lucasfelixdev" target="_blank" rel="noopener noreferrer"><img class="behance" src="./svg/Social Icons/behance.svg" alt="Behance Icon"></a>                
+                        <a href="https://github.com/lucasfelixdev" target="_blank" rel="noopener noreferrer"><img class="github" src="./svg/Social Icons/github.svg" alt="Github Icon"></a>                  
                     </div>
                 </div>
             </div>
@@ -357,6 +359,10 @@
     <!-- Script do HoverTextHabilidades -->
     <script src="./script/changeText.js"></script>
     <script>  
+ 
+
+
+
         document.addEventListener("DOMContentLoaded", function () {
             const tabs = document.querySelectorAll(".tab-button");
             const contents = document.querySelectorAll(".tab-content");
