@@ -29,6 +29,7 @@
         <meta name="twitter:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
         <meta name="twitter:image" content="https://lucasfelixdev.com/img/og-img.png">
 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
      <!-- Canonical (evita conteúdo duplicado) -->
      <link rel="canonical" href="https://lucasfelixdev.com/">
     <!-- TW Elements CSS -->
@@ -63,7 +64,7 @@
 <body class="per-cursor">
     <div>
         <!-- disable dev tools -->
-        <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script> -->
+        <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
     
     </div>
        <header>
@@ -353,16 +354,30 @@
              <img src="./svg/powered.svg" alt="desenvolvido por lucas félix dev">
         </div>
     </footer>
+    <!-- Suavidade scroll -->
+    <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <!-- Script do ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script/reveal.js"></script>
+
     <!-- Script do HoverTextHabilidades -->
     <script src="./script/changeText.js"></script>
+
     <script>  
- 
+        // scroll suave
+            document.addEventListener('DOMContentLoaded', function () {
+        const lenis = new Lenis();
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    });
 
 
-
+        // borders da section table about me com tailwnd
         document.addEventListener("DOMContentLoaded", function () {
             const tabs = document.querySelectorAll(".tab-button");
             const contents = document.querySelectorAll(".tab-content");
@@ -388,6 +403,7 @@
             });
         });
 
+        // Elemento target de mouse - section services
         const section = document.getElementById('trackingSection');
         const cursor = document.getElementById('cursor');
 
