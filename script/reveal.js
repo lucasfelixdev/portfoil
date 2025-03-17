@@ -6,21 +6,30 @@ const duracao = 1200; // Define duração das animações
 const distancia = '80px';   // Define distância inicial da animação.
 
     revelar.reveal('.reveal-top', 
-{
+    {
     duration: duracao,
     distance: distancia,
     origin: 'top',
     
     })
-
+    
     revelar.reveal('.reveal-bottom', 
-    {
+        {
+            duration: duracao,
+            distance: distancia,
+            origin: 'bottom',
+            easing: 'ease-in-out'
+            
+        })
+        
+    revelar.reveal('.reveal-bottom-delay', 
+        {
         duration: duracao,
         distance: distancia,
         origin: 'bottom',
-        easing: 'ease-in-out'
+        delay: 1200
         
-    })
+        })
 
     revelar.reveal('.reveal-bottom-delay1', 
     {
@@ -58,7 +67,7 @@ const distancia = '80px';   // Define distância inicial da animação.
                     distance: distancia,
                     origin: 'right',
                     easing: 'ease-in-out',
-                    delay: 50
+                    delay:150
                     
     })
     revelar.reveal('.spotlight', 
@@ -67,7 +76,7 @@ const distancia = '80px';   // Define distância inicial da animação.
             distance: '0px',
             opacity: 0,
             easing: 'ease-in-out',
-            delay: 70
+            delay: 200
             
     })  
     revelar.reveal('.spotlight1', 

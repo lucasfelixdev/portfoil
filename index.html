@@ -7,14 +7,14 @@
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="11627126-dd92-4549-86cb-772f8d194efd" type="text/javascript" async></script>
     <link rel="icon" href="./svg/fav.svg" type="image/x-icon">
 
- <!-- Meta Description (entre 150 e 160 caracteres) -->
-    <meta name="description" content="DevFront End e Web designer especialista em design de lançamentos, landing pages e sites eficientes e atrativos para seu público alvo">
-    <!-- Meta Keywords (menos relevante hoje, mas pode ajudar) -->
+     <!-- Typed frame script -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Meta Description (entre 150 e 160 caracteres) -->
+    <meta name="description" content="DevFront End e Web designer especialista em design de lançamentos, landing pages e sites eficientes e atrativos para seu público alvo"> <!-- Meta Keywords (menos relevante hoje, mas pode ajudar) -->
     <meta name="keywords" content="Sites, Landing Pages, Social Media, Site, Identidade visual, UX, UI, FrontEnd">
-    <!-- Autor do site -->
-    <meta name="author" content=lucasfelixdev">
-    <!-- !-- Robots (controle de indexação) -->
-    <meta name="robots" content="index, follow">
+    <meta name="author" content=lucasfelixdev"> <!-- Autor do site -->
+    <meta name="robots" content="index, follow">  <!-- !-- Robots (controle de indexação) -->
 
      <!-- Open Graph (para Facebook, LinkedIn e outros) -->
     <meta property="og:title" content="lucasfelixdev | FronEnd | UX/UI">
@@ -23,12 +23,13 @@
     <meta property="og:url" content="https://lucasfelixdev.com">
     <meta property="og:type" content="website">
 
-        <!-- Twitter Cards -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="lucasfelixdev | Home">
-        <meta name="twitter:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
-        <meta name="twitter:image" content="https://lucasfelixdev.com/img/og-img.png">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="lucasfelixdev | Home">
+    <meta name="twitter:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
+    <meta name="twitter:image" content="https://lucasfelixdev.com/img/og-img.png">
 
+     <!-- scroll suave -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
      <!-- Canonical (evita conteúdo duplicado) -->
      <link rel="canonical" href="https://lucasfelixdev.com/">
@@ -70,18 +71,39 @@
        <header>
         <div class="header__article grid-content">
             <article class="header__texts">
-                <h1>
-                    <span>Seu site, sua vitrine!</span>
-                    páginas de alta 
-                    performance para 
-                    gerar mais leads 
-                    e vendas.
-                </h1>
-    
-                <p>
-                    Projetos com <span>UX/UI estratégicos</span>, para que seu cliente tenha uma experiência incrível de navegação!
-                </p>
-                <a href="#">Entrar em contato</a>
+                <div class="header__texts-container-glitch">
+                    <div class="stack" style="--stack: 3;">
+                        <h1 style="--index: 0;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                        <h1 style="--index: 1;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                        <h1 style="--index: 2;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                    </div>
+                </div>
+                <div class="header-destaque-container-prev">
+                    <div class="header-destaque-container">
+                        <span class="header-destaque" id="element">                  
+                        </span>
+                    </div>
+                </div>
+               
+                <a href="#" class="reveal-bottom-delay">Entrar em contato</a>
             </article>
         </div>
     </header>
@@ -325,7 +347,7 @@
 
                 <div class="s-contact__title-texts">
                     <h1>Onde me Encontrar</h1>
-                    <p>Clique para abrir em nova aba</p>
+                    <p>Clique para abrir em nova aba</p>                  
                 </div> 
 
             <div class="s-contact__anim">
@@ -364,6 +386,21 @@
     <script src="./script/changeText.js"></script>
 
     <script>  
+        // Typing header da section table about me com tailwnd
+       
+        var options = {
+    strings: [
+        ' Projetos com <span>UX/UI estratégicos</span>, para que seu cliente tenha uma experiência incrível de navegação'
+    ],
+    typeSpeed: 15, // velocidade de digitação
+    loop: false, // repete a digitação em loop
+    showCursor: false,
+    startDelay: 800,
+    };
+
+    var typed = new Typed('#element', options);
+
+
         // scroll suave
             document.addEventListener('DOMContentLoaded', function () {
         const lenis = new Lenis();
