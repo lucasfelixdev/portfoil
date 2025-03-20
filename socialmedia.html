@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media | Portfoil</title>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="11627126-dd92-4549-86cb-772f8d194efd" type="text/javascript" async></script>
+    <link rel="icon" href="./svg/fav.svg" type="image/x-icon">
+
+     <!-- Typed frame script -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Meta Description (entre 150 e 160 caracteres) -->
+    <meta name="description" content="DevFront End e Web designer especialista em design de lançamentos, landing pages e sites eficientes e atrativos para seu público alvo"> <!-- Meta Keywords (menos relevante hoje, mas pode ajudar) -->
+    <meta name="keywords" content="Sites, Landing Pages, Social Media, Site, Identidade visual, UX, UI, FrontEnd">
+    <meta name="author" content=lucasfelixdev"> <!-- Autor do site -->
+    <meta name="robots" content="index, follow">  <!-- !-- Robots (controle de indexação) -->
+
+     <!-- Open Graph (para Facebook, LinkedIn e outros) -->
+    <meta property="og:title" content="lucasfelixdev | FronEnd | UX/UI">
+    <meta property="og:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
+    <meta property="og:image" content="https://lucasfelixdev.com/img/og-img.png">
+    <meta property="og:url" content="https://lucasfelixdev.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="lucasfelixdev | Home">
+    <meta name="twitter:description" content="Websites rápidos, com UX/UI estratégico e SEO otimizado. Vamos transformar sua presença digital?">
+    <meta name="twitter:image" content="https://lucasfelixdev.com/img/og-img.png">
+
+     <!-- scroll suave -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+     <!-- Canonical (evita conteúdo duplicado) -->
+     <link rel="canonical" href="https://lucasfelixdev.com/">
+    <!-- TW Elements CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.3.0"> defer</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0P004WG6T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B0P004WG6T');
+    </script>
+
+  
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            corePlugins: {
+                preflight: false, // Desativa estilos padrão do Tailwind se necessário
+            },
+        };
+    </script>
+</head>
+<style>
+    .overflow{
+        overflow: hidden;
+    }
+/* Lightbox inicial (invisível, mas ainda ocupando espaço) */
+.lightbox {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    background: #81785b2a;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+/* Lightbox ativo (aparece com efeito suave) */
+.lightbox.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Efeito na imagem dentro do lightbox */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  
+}
+
+.lightbox.active img {
+    overflow: hidden;
+    transform: scale(1.05);
+    
+}
+  </style>
+<body class="per-cursor" id="body">
+    <div>
+        <!-- disable dev tools -->
+        <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script> -->
+    
+    </div>
+       <header>
+        
+        <div class="header__article grid-content">
+            <article class="header__texts">
+                <div class="header__texts-container-glitch">
+                    <div class="stack" style="--stack: 3;">
+                        <h1 style="--index: 0;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                        <h1 style="--index: 1;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                        <h1 style="--index: 2;">
+                            <span>Seu site, sua vitrine!</span>
+                            páginas de alta 
+                            performance para 
+                            gerar mais leads 
+                            e vendas.
+                        </h1>
+                    </div>
+                </div>
+                <div class="header-destaque-container-prev">
+                    <div class="header-destaque-container">
+                        <span class="header-destaque" id="element">                  
+                        </span>
+                    </div>
+                </div>
+               
+                <a href="#" class="reveal-bottom-delay">Entrar em contato</a>
+            </article>
+        </div>
+    </header>
+    <div class="divisor reveal-scale"></div>
+    <main>
+        <section class="s-lancamento">
+            <div class="s-lancamento-title reveal-top flex items-center gap-4">
+                <img src="./img/socialMedia.png" width="70" alt="estrela social media">
+                <h1>Criativos exclusivos<br> para lançamento</h1>
+            </div>
+            <div class="s-galeria grid-content reveal-bottom">
+                <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 gallery">
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m1.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox  h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m4.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m7.png" alt="">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m2.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m5.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m8.png" alt="">
+                        </div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m3.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m6.png" alt="">
+                        </div>
+                        <div>
+                            <img class="img-lightbox h-auto max-w-full rounded-lg" src="./img/lancamentos/lancamento-m9.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="s-contact--gradient" style="height: 100vh;"></div>
+        <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="">
+  </div>
+    </main>
+    <footer>
+        
+        <div class="footer-container grid-content">
+            <p>Copyright © 2025 <span>lucasfelixdev.com.</span> Todos os direitos reservados.</p>
+             <img src="./svg/powered.svg" alt="desenvolvido por lucas félix dev">
+        </div>
+    </footer>
+
+    <!-- Suavidade scroll -->
+    <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Script do ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/script/reveal.js"></script>
+    <!-- Script do HoverTextHabilidades -->
+    <script src="./script/changeText.js"></script>
+    <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".img-lightbox");
+    const body = document.getElementById("body");
+
+images.forEach(img => {
+  img.addEventListener("click", function() {
+    lightboxImg.src = this.src;
+    lightbox.classList.add("active");
+    body.classList.add("overflow")
+  });
+});
+
+lightbox.addEventListener("click", function() {
+  lightbox.classList.remove("active");
+  body.classList.remove("overflow")
+});
+      </script>
+</body>
+</html>

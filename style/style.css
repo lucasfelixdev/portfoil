@@ -296,7 +296,7 @@ header article a{
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    letter-spacing: 21.12px;
+    letter-spacing: 5px;
     background: linear-gradient(180deg, #FFF 13%, rgb(44 0 79 / 63%) 96%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -854,8 +854,30 @@ header article a{
     .footer-container span{color: var(--ColorPrimary);}
     .footer-container img{height: 23px;}
 
-
-
+    /* //////////////////////////////// PÁGINA SOCIAL MEDIA MOBILE //////////////////////////////// */
+    .s-galeria{
+        box-sizing: border-box;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .s-galeria .gallery img{transition: 0.5s ease-in-out;  border: 2px solid #4a4a4a28; min-height: calc(max-content + 40px);}
+    .s-galeria .gallery img:hover{
+        z-index: 99;
+        position: relative;
+        transition: 0.5s ease-in-out;
+        transform: scale(1.03);
+        border: 2px solid #f5de91;
+    }
+    .s-lancamento{display: flex;flex-direction: column;align-items: center; padding: 200px 0;}
+    .s-lancamento-title h1{
+    color: var(--WhitePrimary);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0px;
+    line-height: 28px;
+    }
 
 
     /* //////////////////////////////// RESPONSIVIDADE MOBILE //////////////////////////////// */
