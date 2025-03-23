@@ -48,6 +48,7 @@ html, *{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    user-select: none;
 
     
 }
@@ -855,6 +856,11 @@ header article a{
     .footer-container img{height: 23px;}
 
     /* //////////////////////////////// PÁGINA SOCIAL MEDIA MOBILE //////////////////////////////// */
+
+    .h-socialMedia{
+        background-image: url(../img/socialMedia/header-desktop.png) !important;
+        background-size: contain;
+    }
     .s-galeria{
         box-sizing: border-box;
         padding: 50px 0;
