@@ -65,61 +65,64 @@
     .overflow{
         overflow: hidden;
     }
-/* Lightbox inicial (invisível, mas ainda ocupando espaço) */
-.lightbox {
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    background: #81785b2a;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transform: scale(0.95);
-    transition: opacity 0.3s ease, visibility 0.3s;
-}
 
-/* Lightbox ativo (aparece com efeito suave) */
-.lightbox.active {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Efeito na imagem dentro do lightbox */
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-  
-}
-
-.lightbox.active img {
-    overflow: hidden;
-    transform: scale(1.05);
-    
-}
   </style>
 <body class="per-cursor" id="body">
-    <div>
-        <!-- disable dev tools -->
-        <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script> -->
-    
-    </div>
-       <header class="h-socialMedia">
-        
+ 
+    <header class="h-socialMedia">
+            <div class="none-block" style="width: 100%; height: 100px;"></div>
+            <!------------------------------ DESKTOP ------------------------------------>
+            <div class="h-header__container grid-content" id="header-desktop">
+                    <div class="h-socialMedia__container1 fade-left">
+                        <div class="h-socialMedia__container2 fade-left">
+                            <div class="h-socialMedia__container3 fade-left">
+                                <h1 class="fade-left">
+                                    <strong>Social Media</strong>
+                                    <span>que conecta</span>
+                                    e engaja!
+                                </h1>
+                                <a href="http://" target="_blank" rel="noopener noreferrer">Orçamento <img src="./svg/socialmedia/Arrow-right.svg" alt="botão que direciona para página de orçamento" class="fade-left">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!------------------------------ MOBILE ------------------------------------>
+            <div class="h-header__container grid-content" id="header-mobile">
+
+                    <div class="h-socialMedia__container1-mobile fade-bottom-mobile">
+                        <div class="h-socialMedia__container2-mobile fade-bottom-mobile">
+                            <div class="h-socialMedia__container3-mobile fade-bottom-mobile">
+                                <h1 class="fade-bottom-mobile">
+                                    <strong>Social Media</strong>
+                                    <span>que conecta</span>
+                                    e engaja!
+                                </h1>
+                                <a href="http://" target="_blank" rel="noopener noreferrer">Orçamento <img src="./svg/socialmedia/Arrow-right.svg" alt="botão que direciona para página de orçamento">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
     </header>
-    <div class="divisor reveal-scale"></div>
+    <div class="divisor reveal-scale" id="mobile-divisor"></div>
     <main>
         <section class="s-lancamento">
-            <div class="s-lancamento-title reveal-top flex items-center gap-4">
-                <img src="./img/socialMedia.png" width="70" alt="estrela social media">
-                <h1>Criativos exclusivos<br> para lançamento</h1>
+            <div class="s-lancamento-title flex items-center">
+
+                <h3 class="fade-letters-bt">C</h3>
+                <h3 class="fade-letters-bt">A</h3>
+                <h3 class="fade-letters-bt">T</h3>
+                <h3 class="fade-letters-bt">E</h3>
+                <h3 class="fade-letters-bt">G</h3>
+                <h3 class="fade-letters-bt">O</h3>
+                <h3 class="fade-letters-bt">R</h3>
+                <h3 class="fade-letters-bt">I</h3>
+                <h3 class="fade-letters-bt">A</h3>
+                
             </div>
             <div class="s-galeria grid-content reveal-bottom">
                 <div class="grid grid-cols-3 sm:grid-cols-3 gap-4 gallery">
@@ -162,7 +165,7 @@
         <div class="s-contact--gradient" style="height: 100vh;"></div>
         <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
-        <img id="lightbox-img" src="" alt="">
+        <img id="lightbox-img" src="" alt="imagem dimensionada">
   </div>
     </main>
     <footer>
@@ -172,32 +175,31 @@
              <img src="./svg/powered.svg" alt="desenvolvido por lucas félix dev">
         </div>
     </footer>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
 
-    <!-- Suavidade scroll -->
-    <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <!-- Script do ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script/reveal.js"></script>
-    <!-- Script do HoverTextHabilidades -->
-    <script src="./script/changeText.js"></script>
+
+    <!-- Script Abrir imagens -->
+  
     <script>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const images = document.querySelectorAll(".img-lightbox");
-    const body = document.getElementById("body");
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const images = document.querySelectorAll(".img-lightbox");
+            const body = document.getElementById("body");
+                images.forEach(img => {
+                img.addEventListener("click", function() {
+                    lightboxImg.src = this.src;
+                    lightbox.classList.add("active");
+                    body.classList.add("overflow")
+                });
+                });
 
-images.forEach(img => {
-  img.addEventListener("click", function() {
-    lightboxImg.src = this.src;
-    lightbox.classList.add("active");
-    body.classList.add("overflow")
-  });
-});
-
-lightbox.addEventListener("click", function() {
-  lightbox.classList.remove("active");
-  body.classList.remove("overflow")
-});
+                lightbox.addEventListener("click", function() {
+                lightbox.classList.remove("active");
+                body.classList.remove("overflow")
+                });
       </script>
 </body>
 </html>

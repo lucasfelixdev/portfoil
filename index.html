@@ -52,19 +52,11 @@
 
   
     
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            corePlugins: {
-                preflight: false, // Desativa estilos padrão do Tailwind se necessário
-            },
-        };
-    </script>
+
 </head>
 
-<body class="per-cursor">
+<body class="index per-cursor">
        <header>
-        
         <div class="header__article grid-content">
             <article class="header__texts">
                 <div class="header__texts-container-glitch">
@@ -153,7 +145,7 @@
             <div class="s-servico__itens grid-content "  style="z-index: 2; position: relative;">
 
                 <div class="s-servico__itens-card ux" style="top: 6%;">
-                    <div class="border-card reveal-right-delay0" data-scroll></div>
+                    <div class="border-card reveal-right-cards" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -164,7 +156,7 @@
                             </p>
     
                             <div class="s-servico__img sitesLP">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="aviso.html" target="_blank" rel="noopener noreferrer">
                                     <p><span class="span">Dar uma olhada!</span></p>
                                     <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
                                 </a>
@@ -174,7 +166,7 @@
                 </div>
 
                 <div class="s-servico__itens-card branding" style="top: 18.1%;">
-                    <div class="border-card reveal-right-delay1" data-scroll></div>
+                    <div class="border-card reveal-right-cards" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -185,7 +177,7 @@
                             </p>
     
                             <div class="s-servico__img idVisual">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="aviso.html" target="_blank" rel="noopener noreferrer">
                                     <p><span class="span">Dar uma olhada!</span></p>
                                     <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
                                 </a>
@@ -194,7 +186,7 @@
                     </div>     
                 </div>
                 <div class="s-servico__itens-card">
-                    <div class="border-card reveal-right-delay2" data-scroll></div>
+                    <div class="border-card reveal-right-cards" data-scroll></div>
 
                     <div class="s-servico__card">
                         <div class="s-servico__card-texts">
@@ -205,7 +197,7 @@
                             </p>
     
                             <div class="s-servico__img socialMedia">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <a href="aviso.html" target="_blank" rel="noopener noreferrer">
                                     <p><span class="span">Dar uma olhada!</span></p>
                                     <p> <img src="./svg/ball-cards.svg" alt="">CLIQUE PARA VER MAIS</p>
                                 </a>
@@ -373,8 +365,10 @@
         </div>
     </footer>
     <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+
     <!-- Suavidade scroll -->
     <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
     <!-- Script do ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script/reveal.js"></script>
@@ -386,29 +380,29 @@
         // Typing header da section table about me com tailwnd
        
         var options = {
-    strings: [
-        ' Projetos com <span>UX/UI estratégicos</span>, para que seu cliente tenha uma experiência incrível de navegação'
-    ],
-    typeSpeed: 15, // velocidade de digitação
-    loop: false, // repete a digitação em loop
-    showCursor: false,
-    startDelay: 800,
-    };
+            strings: [
+                ' Projetos com <span>UX/UI estratégicos</span>, para que seu cliente tenha uma experiência incrível de navegação'
+            ],
+            typeSpeed: 15, // velocidade de digitação
+            loop: false, // repete a digitação em loop
+            showCursor: false,
+            startDelay: 800,
+            };
 
-    var typed = new Typed('#element', options);
+            var typed = new Typed('#element', options);
 
 
         // scroll suave
-            document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function () {
         const lenis = new Lenis();
 
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
 
-        requestAnimationFrame(raf);
-    });
+            requestAnimationFrame(raf);
+            });
 
 
         // borders da section table about me com tailwnd
@@ -428,39 +422,39 @@
             // Ativar a primeira aba por padrão
             if (tabs.length > 0) {activateTab(tabs[0].getAttribute("data-tab"));}
 
-            tabs.forEach(tab => {
-                tab.addEventListener("click", function (event) {
-                    event.preventDefault();  // Impede o movimento da página
-                    const tabId = this.getAttribute("data-tab");
-                    activateTab(tabId);
+                    tabs.forEach(tab => {
+                        tab.addEventListener("click", function (event) {
+                            event.preventDefault();  // Impede o movimento da página
+                            const tabId = this.getAttribute("data-tab");
+                            activateTab(tabId);
+                        });
+                    });
                 });
-            });
-        });
 
         // Elemento target de mouse - section services
-        const section = document.getElementById('trackingSection');
-        const cursor = document.getElementById('cursor');
+                const section = document.getElementById('trackingSection');
+                const cursor = document.getElementById('cursor');
 
-        section.addEventListener('mousemove', (e) => {
-            const rect = section.getBoundingClientRect();
-            const cursorWidth = cursor.offsetWidth;
-            const cursorHeight = cursor.offsetHeight;
+                section.addEventListener('mousemove', (e) => {
+                    const rect = section.getBoundingClientRect();
+                    const cursorWidth = cursor.offsetWidth;
+                    const cursorHeight = cursor.offsetHeight;
 
-            // Corrigindo posição centralizada
-            const x = e.clientX - rect.left - (cursorWidth / 2);
-            const y = e.clientY - rect.top - (cursorHeight / 2);
+                    // Corrigindo posição centralizada
+                    const x = e.clientX - rect.left - (cursorWidth / 2);
+                    const y = e.clientY - rect.top - (cursorHeight / 2);
 
-            cursor.style.left = `${x}px`;
-            cursor.style.top = `${y}px`;
-        });
+                    cursor.style.left = `${x}px`;
+                    cursor.style.top = `${y}px`;
+                });
 
-        section.addEventListener('mouseenter', () => {
-            cursor.style.opacity = "1";
-        });
+                section.addEventListener('mouseenter', () => {
+                    cursor.style.opacity = "1";
+                });
 
-        section.addEventListener('mouseleave', () => {
-            cursor.style.opacity = "0";
-        });
+                section.addEventListener('mouseleave', () => {
+                    cursor.style.opacity = "0";
+                });
     </script>
     
 </body>

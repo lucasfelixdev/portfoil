@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opa! Estamos trabalhando nisso...</title>
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+    /* Fontes personalizadas... (mantenho igual) */
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-Light.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'FunnelDisplay';
+      src: url('fonts/FunnelDisplay-ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    html, * {
+      font-family: "Funnel Display", sans-serif;
+      padding: 0;
+      margin: 0;
+      scroll-behavior: smooth;
+      user-select: none;
+    }
+
+    :root {
+      --blackprimary: #0A0A0A;
+      --ColorPrimary: #CA86FF;
+      --ColorSecundary: #AD42FF;
+      --ColorExtra: #F028FD;
+
+      --WhitePure: #f6f6f6;
+      --WhitePrimary: #CDCDCD;
+      --WhiteTextSecundary: #AAAAAA;
+      --WhiteSecudary: #5C5C5C;
+      --cardSkills: #141414;
+      --cardBorder: #222222;
+
+      --max-width: 1920px;
+      --grid-content: 1200px;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--ColorSecundary);
+      border-radius: 10px 0 0 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--blackprimary);
+    }
+
+    /* Fundo colorido que aparece durante a transição */
+    .bg-transition {
+      position: fixed;
+      inset: 0;
+      background: var(--blackprimary);
+      z-index: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      margin: 0 auto;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: var(--ColorSecundary);
+    }
+
+    .aviso {
+      z-index: 1;
+      width: 500px;
+      margin: 0 auto;
+      align-items: center;
+      display: flex;
+    }
+
+    .aviso h1 {
+      color: var(--WhitePure);
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+    /* Loader pirâmide */
+    .pyramid-loader {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      display: block;
+      transform-style: preserve-3d;
+      transform: rotateX(-20deg);
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: spin 4s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .pyramid-loader .wrapper .side {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transform-origin: center top;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .pyramid-loader .wrapper .side1 {
+      transform: rotateZ(-30deg) rotateY(90deg);
+      background: conic-gradient(#CA86FF, #F028FD, #D8CCE6, #2F2585);
+    }
+
+    .pyramid-loader .wrapper .side2 {
+      transform: rotateZ(30deg) rotateY(90deg);
+      background: conic-gradient(#AD42FF, #D8CCE6, #F028FD, #CA86FF);
+    }
+
+    .pyramid-loader .wrapper .side3 {
+      transform: rotateX(30deg);
+      background: conic-gradient(#AD42FF, #D8CCE6, #F028FD, #CA86FF);
+    }
+
+    .pyramid-loader .wrapper .side4 {
+      transform: rotateX(-30deg);
+      background: conic-gradient(#CA86FF, #F028FD, #D8CCE6, #2F2585);
+    }
+
+    .pyramid-loader .wrapper .shadow {
+      width: 60px;
+      height: 60px;
+      background: #8B5AD5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transform: rotateX(90deg) translateZ(-40px);
+      filter: blur(12px);
+    }
+
+    .per-cursor {
+      cursor: url("../svg/cursor/pointer.cur"), default;
+    }
+
+    a {
+      cursor: url("../svg/cursor/hand.cur"), pointer;
+    }
+
+    @media (max-width: 500px) {
+        .aviso{text-align: center; flex-wrap: wrap; margin-top: -100px;
+        justify-content: center; width: 60%; & h1{margin: -50px 0 0 0;}}
+        
+        
+    }
+  </style>
+</head>
+
+<!-- Aplica a transição -->
+<body class="per-cursor" transition-style="in:circle:hesitate"> 
+
+  <!-- Fundo gradiente da transição -->
+  <div class="bg-transition"></div>
+
+  <div class="aviso">
+    <div class="pyramid-loader">
+      <div class="wrapper">
+        <span class="side side1"></span>
+        <span class="side side2"></span>
+        <span class="side side3"></span>
+        <span class="side side4"></span>
+        <span class="shadow"></span>
+      </div>
+    </div>
+    <h1><span style="font-size:70px; color:var(--ColorSecundary); font-weight: 900;">OPS!</span><br>Essa página está em construção. Voltamos já!</h1>
+  </div>
+ <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+  <script src="https://unpkg.com/transition-style"></script>
+  <script>
+    // Libera o scroll depois da animação (opcional)
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 1500);
+  </script>
+</body>
+</html>
