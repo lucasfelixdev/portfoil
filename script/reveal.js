@@ -1,3 +1,5 @@
+
+
 window.revelar = ScrollReveal({
     reset:false // True para animação repetir.
 })

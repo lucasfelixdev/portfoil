@@ -1,0 +1,110 @@
+body{
+    overflow-x: hidden;
+    font-family: "Funnel Display", sans-serif;
+    background-color: var(--blackprimary);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+        -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   
+}
+
+
+
+
+nav{
+    z-index:9999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.602px solid rgba(203, 154, 255, 0.20);
+    background: rgba(11, 0, 20, 0.801);
+    backdrop-filter: blur(6px);
+}
+
+a{text-decoration: none;}
+li, ul{list-style: none;}
+
+.nav-container{
+    width: 68%;
+    margin: 0 auto;
+    max-width: var(--grid-content);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .nav-container a {color: var(--WhitePrimary);}
+nav .nav-container .contato-nav{
+    position: relative;
+    overflow: hidden;
+    color: var(--WhitePrimary);
+    font-weight: 500;
+    display: flex;
+    font-size: 20px;
+    position: relative;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 12.82px;
+    flex-shrink: 0;
+    border-radius: 160.25px;
+    border: 1.602px solid rgba(255, 255, 255, 0.10);
+    background: #7326ad;
+    box-shadow: 1px -0.59px 12.46px 0px rgba(255, 255, 255, 0.50) inset, 0px 6.41px 38.46px 0px rgba(255, 226, 219, 0.20);
+    transition: 0.5s ease-in-out;
+
+   
+}
+nav .nav-container .contato-nav:hover{scale: 1.05; transition: 0.4s ease-in-out;}
+nav .nav-container .contato-nav::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -50px; /* começa fora do botão à direita */
+    width: 50px;
+    height: 150px;
+    background-color: #cf91ff70;
+    filter: blur(10px);
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+    z-index: 3;
+    rotate: -25deg;
+   
+}
+
+nav .nav-container .contato-nav:hover::after {
+    transform: translateX(-250px); /* atravessa o botão da direita para a esquerda */
+}
+
+
+
+
+.nav-container img{height: 50px;}
+
+.nav-container ul{display: flex; gap: 30px; color: var(--WhitePrimary);}
+
+
+
+
+
+
+.footer-container p{text-align: center; font-size: 12px;}
+footer{
+    z-index: 999;
+    position: relative;
+    height: 80px;
+    width: 100%;
+    background: #101010;
+}
+.footer-container{height: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+.footer-container span{color: var(--ColorPrimary);}
+.footer-container img{height: 23px;}
+
+.footer-container{justify-content: center;}
+.footer-container{color: var(--WhitePure);}
+.footer-container p{text-align: center; width: 220px;}
+.footer-container img{display: none;}

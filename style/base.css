@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FunnelDisplay';
+    src: url('fonts/FunnelDisplay-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+html, *{
+    scroll-behavior: smooth;
+    font-family: "Funnel Display", sans-serif;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    user-select: none;
+
+    
+}
+
+:root{
+    --blackprimary: #0a0118;
+    
+    --ColorPrimary: #CA86FF;
+    --ColorSecundary: #AD42FF;
+
+    --WhitePure: #f6f6f6;
+    --WhitePrimary: #CDCDCD;
+    --WhiteTextSecundary: #AAAAAA;
+    --WhiteSecudary: #5C5C5C;
+    --cardSkills: #141414;
+    --cardBorder: #222222;
+
+    --max-width: 1920px;
+    --grid-content: 1200px;
+    --bg-socialMediaHeader: radial-gradient(232.14% 242.85% at 50.03% -35.86%, rgba(10, 10, 10, 0.00) 31.5%, #AD42FF 51.48%, #EBF9FF 63.5%);
+
+    --4-x-position: 20%
+
+    --4-y-position: 80%
+
+    --5-x-position: 80%
+
+    --5-y-position: 20%
+}
+
+/* Estilizando a barra de rolagem para Chrome, Safari, e Edge */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--ColorSecundary);
+    border-radius: 10px 0 0 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--blackprimary);
+    
+}
+
+.framer-8bz8u7-container {
+    bottom: 0;
+    flex: none;
+    height: 155px;
+    width: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+}
