@@ -49,6 +49,10 @@
 
     gtag('config', 'G-B0P004WG6T');
     </script>
+
+ <meta name="adopt-website-id" content="abadeef8-d840-447c-be01-fe376b10eff4" />
+<script src="//tag.goadopt.io/injector.js?website_code=abadeef8-d840-447c-be01-fe376b10eff4" 
+class="adopt-injector"></script>
 </head>
 
 <body class="index per-cursor">
@@ -76,12 +80,14 @@
 
         <nav>
             <div class="nav-container">
-                <img src="./svg/nav-logo.svg" alt="logo-nav">
+                <a href="./index.html">
+                    <img src="./svg/nav-logo.svg" alt="logo-nav">
+                </a>
                 <ul>
-                    <li>Home</li>
-                    <li>Serviços</li>
-                    <li>Depoimentos</li>
-                    <li>Contato</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#link-servicos">Serviços</a></li>
+                    <li><a href="">Depoimentos</a></li>
+                    <li><a href="#link-contato">Contato</a></li>
                 </ul>
                 <a class="contato-nav" href="#">Contato</a>
             </div>
@@ -171,9 +177,9 @@
 
 
                 </div>
-                <h1 class="reveal-top" >SERVIÇOS</h1>
+                <h1 id="link-servicos" class="reveal-top " >SERVIÇOS</h1>
             </div>
-            <div class="s-servico__itens grid-content "  style="z-index: 2; position: relative;">
+            <div  class="s-servico__itens grid-content"  style="z-index: 2; position: relative;">
 
                 <div class="s-servico__itens-card ux" style="top: 6%;">
                     <div class="border-card reveal-right-cards" data-scroll></div>
@@ -362,7 +368,7 @@
 
         <div class="s-contact--gradient">
 
-            <div class="s-contact grid-content">  
+            <div id="link-contato" class="s-contact grid-content">  
 
                 <div class="s-contact__title-texts reveal-bottom">
                     <h1>Onde me Encontrar</h1>
@@ -395,7 +401,7 @@
              <img src="./svg/powered.svg" alt="desenvolvido por lucas félix dev">
         </div>
     </footer>
-    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+    <!-- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script> -->
 
     <!-- Suavidade scroll -->
     <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>

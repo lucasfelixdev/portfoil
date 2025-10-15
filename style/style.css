@@ -47,8 +47,9 @@ html, *{
     font-family: "Funnel Display", sans-serif;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     
 }
@@ -112,7 +113,7 @@ a{cursor: url("../svg/cursor/hand.cur"), pointer;}
  /* //////////////    PERSONALIZAÇÃO DE CURSOR DAS PAGES */
 .grid-content{width: 82%; max-width: var(--grid-content); margin: 0 auto;}
 .divisor{
-    z-index: 999;
+    z-index: 2;
     position: relative;
     height: 2px;
     margin: 0 auto;
@@ -138,13 +139,13 @@ a{cursor: url("../svg/cursor/hand.cur"), pointer;}
 
      z-index: 1;
      background: var(--blackprimary);
-    -webkit-mask-image: url('../svg/grade-background-subtract.svg');
-    mask-image: url('../svg/grade-background-subtract.svg');
+    -webkit-mask-image: url('../svg/grade-background-subtract-ULTRAWIDE.svg');
+    mask-image: url('../svg/grade-background-subtract-ULTRAWIDE.svg');
    
     -webkit-mask-size: cover;
-    mask-size: cover;
+    mask-size: 130%;
     -webkit-mask-position: center;
-    mask-position: center;
+    mask-position: top center;
 
    -webkit-mask-repeat: no-repeat;
    mask-repeat: no-repeat;
@@ -179,7 +180,7 @@ nav{
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 16px 0;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1.602px solid rgba(203, 154, 255, 0.20);
@@ -198,14 +199,14 @@ nav{
 }
 
 nav .nav-container .contato-nav{
-    position: relative;
+      position: relative;
     overflow: hidden;
     color: var(--WhitePrimary);
     font-weight: 500;
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
-    padding: 8px 40px;
+    padding: 6px 38px;
     justify-content: center;
     align-items: center;
     gap: 12.82px;
@@ -242,9 +243,19 @@ nav .nav-container .contato-nav:hover::after {
 
 
 
-.nav-container img{height: 50px;}
+.nav-container img{height: 40px;}
 
 .nav-container ul{display: flex; gap: 30px; color: var(--WhitePrimary);}
+.nav-container ul li{ 
+    
+   
+    transition: 0.5s ease-in-out;
+    &:hover{
+        transition: 0.3s ease-in-out;
+         color: var(--ColorPrimary);
+         scale: 1.05;
+    }
+}
 
 .header__texts{
     height: 100vh;
@@ -460,7 +471,7 @@ header h1 span{
 
 .s-servico{
     position: relative;
-    padding: 131px 0;
+    padding: 112px 0;
     margin: 0 auto;
     width: 100%;
 }
@@ -468,16 +479,17 @@ header h1 span{
 .s-servico::after{
     z-index: 0;
     content: '';
-    filter: blur(60px);
-    opacity: 0.1;
+    filter: blur(40px);
+    opacity: 0.08;
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 100px;
     left: 50%;
-    top: 5%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--ColorSecundary);
+    border-radius: 99px;
 }
 .s-servico__text-title{
     padding: 0 0 70px 0;
@@ -574,7 +586,7 @@ header h1 span{
     
     gap: 40px;
     row-gap: 40px;
-    width: 85%;
+    width: 86%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -634,7 +646,7 @@ header h1 span{
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 28.361px; /* 96.782% */
+    line-height: 26px; /* 96.782% */
     letter-spacing: -0.879px;}
 .s-servico__card h3{text-align: center; color: white; font-size: 29.304px; font-weight: 700; position: absolute; right: 1%; top: 1%;  width: 50px; padding: 0; margin-block-start: 0em;
     margin-block-end: 0em; opacity: 1;}
@@ -652,15 +664,14 @@ header h1 span{
 
 
 .s-servico__card-texts > p{    
-    width: 200px;
+    width: 215px;
     color: var(--WhiteTextSecundary);
     leading-trim: both;
     text-edge: cap;
-    font-size: 10px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 13px; /* 133.333% */
-    letter-spacing: -0.384px;
 }
 
 .s-servico__img{
