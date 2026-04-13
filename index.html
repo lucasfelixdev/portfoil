@@ -35,7 +35,7 @@
      <link rel="canonical" href="https://lucasfelixdev.com/">
     <!-- TW Elements CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
-
+    <link rel="stylesheet" href="./style/burguer.css">
     <link rel="stylesheet" href="./style/style.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com/3.3.0"> defer</script>
@@ -78,20 +78,53 @@ class="adopt-injector"></script>
     </div>
        <header id="header-home">
 
-        <nav>
-            <div class="nav-container">
-                <a href="./index.html">
-                    <img src="./svg/nav-logo.svg" alt="logo-nav">
-                </a>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="#link-servicos">Serviços</a></li>
-                    <li><a href="">Depoimentos</a></li>
-                    <li><a href="#link-contato">Contato</a></li>
-                </ul>
-                <a class="contato-nav" href="#">Contato</a>
-            </div>
-        </nav>
+
+        <div class="div-nav-container">
+            <nav>
+    
+                <div class="nav-container">
+                    
+                        <a href="./index.html">
+                            <img src="./svg/nav-logo.svg" alt="logo-nav">
+                        </a>
+    
+                        <ul class="ul-nav">
+                            <li><a href="">Serviços</a></li>
+                            <li><a href="#link-servicos">Depoimentos</a></li>
+                            <li><a href="">Etapas</a></li>
+                            <li><a href="#link-contato">Método</a></li>
+                        </ul>  
+                        <div class="button-container">
+    
+                            <button class="hamburger hamburger--collapse" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button> 
+    
+                            <a class="contato-nav" href="https://api.whatsapp.com/send?phone=5581998201779&text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20uma%20call%20ou%20conhecer%20melhor%20seus%20servi%C3%A7os%21%20">Contato</a>                    
+                        </div>
+                </div>
+            </nav>
+            <ul class="ul-nav-mob">
+                            <li><a href="">Serviços</a></li>
+                            <li><a href="#link-servicos">Depoimentos</a></li>
+                            <li><a href="">Etapas</a></li>
+                            <li><a href="#link-contato">Método</a></li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+         
         <div class="header__article grid-content">
             <article class="header__texts">
                 <div class="header__texts-container-glitch">
@@ -409,7 +442,7 @@ class="adopt-injector"></script>
     <!-- Script do ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script/reveal.js"></script>
-
+    <script src="./script/responsive.js"></script>
     <!-- Script do HoverTextHabilidades -->
     <script src="./script/changeText.js"></script>
 

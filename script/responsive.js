@@ -1,21 +1,29 @@
-// document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.querySelector(".hamburger");
+  const menuItems = document.querySelector(".ul-nav-mob");
 
-let show = true;
-const menuSection = document.querySelector(".container__responsividade");
-const menuToggle = document.querySelector(".menu-toggle");
-const itens = document.querySelectorAll(".nav__items a");
 
-menuToggle.addEventListener("click", () => {
-  document.body.style.overflow = show ? "hidden" : "initial";
-  menuSection.classList.toggle("on", show);
-  show = !show;
-});
+  function toggleMenu() {
+    const isOpen = menuItems.classList.toggle("is-active");
+    menuToggle.classList.toggle("is-active", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "initial";
+  }
 
-itens.forEach(item => {
-  item.addEventListener("click", () => {
-    menuSection.classList.remove("on");
+
+  function closeMenu() {
+    menuItems.classList.remove("is-active");
+    menuToggle.classList.remove("is-active");
     document.body.style.overflow = "initial";
-    show = true;
-  });
-});
+  }
 
+  // Ao clicar no hambúrguer → abre/fecha
+  menuToggle.addEventListener("click", toggleMenu);
+
+  // Ao clicar em qualquer link → fecha
+  menuItems.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Ao recarregar a página → fecha sempre
+  closeMenu();
+});

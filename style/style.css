@@ -176,11 +176,11 @@ a{cursor: url("../svg/cursor/hand.cur"), pointer;}
 
 
 nav{
-    z-index:9999999;
+    z-index:100;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 16px 0;
+    padding: 14px 0;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1.602px solid rgba(203, 154, 255, 0.20);
@@ -188,7 +188,7 @@ nav{
     backdrop-filter: blur(16.024999618530273px);
   
 }
-
+.ul-nav-mob{display: none;}
 .nav-container{
     width: 80%;
     margin: 0 auto;
@@ -240,10 +240,13 @@ nav .nav-container .contato-nav:hover::after {
     transform: translateX(-250px); /* atravessa o botão da direita para a esquerda */
 }
 
+.div-nav-container{position: relative;}
 
 
-
-.nav-container img{height: 40px;}
+.nav-container img{
+    max-width: 115px !important;
+    width: 97px;
+    height: 40px;}
 
 .nav-container ul{display: flex; gap: 30px; color: var(--WhitePrimary);}
 .nav-container ul li{ 
@@ -279,6 +282,20 @@ nav .nav-container .contato-nav:hover::after {
     right: 0;
     z-index: 999;
 }
+.button-container{
+    display: flex;
+}
+
+
+.nav-links {
+    /* Garante que o menu esteja visível horizontalmente em telas grandes */
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
 
     #header-home h1{
         color: var(--WhitePrimary);
@@ -467,6 +484,11 @@ header h1 span{
     background: rgb(173,66,255);
     background: rgb(173,66,255);
     background: linear-gradient(128deg, rgba(173,66,255,1) 0%, rgba(55,28,142,1) 100%);
+}
+
+.header__article{
+    display: flex;
+    justify-content: right;
 }
 
 .s-servico{
@@ -1402,7 +1424,39 @@ header h1 span{
     }
     @media (max-width: 1400px) {
         .s-servico__itens{justify-content: center;}}
+        
 
+         @media (max-width: 918px) {
+            .nav-container ul{display: none; }
+            .nav-container{width: 90% !important;}
+            nav .nav-container .contato-nav{
+                    border-radius: 0px 10px 10px 0px;
+
+            }
+            .button-container{gap: 3px;}
+                
+            .ul-nav-mob.is-active{
+                z-index: 9999999;
+                        
+                        top: 82px;
+                        color: rgb(133, 123, 123);
+                        display: flex !important;
+                        position: absolute;
+                        background: rgba(16, 12, 20, 0.772);
+                        height: 89vh;
+                        width: 96%;
+                        margin: 0 auto;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 8px;
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        backdrop-filter: blur(20px);
+                        
+
+            }
+         }
     @media (max-width: 770px) {
         .s-background{    -webkit-mask-size: contain;
             mask-size: contain;

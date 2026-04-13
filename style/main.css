@@ -14,7 +14,7 @@ body{
 
 
 nav{
-    z-index:9999999;
+    z-index:100;
     position: fixed;
     top: 0;
     width: 100%;
@@ -23,7 +23,7 @@ nav{
     align-items: center;
     border-bottom: 1.602px solid rgba(203, 154, 255, 0.20);
     background: rgba(11, 0, 20, 0.801);
-    backdrop-filter: blur(6px);
+  
 }
 
 a{text-decoration: none;}
