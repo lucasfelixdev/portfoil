@@ -1,0 +1,63 @@
+/* From Uiverse.io by sinful_9361 - https://uiverse.io/sinful_9361/proud-kangaroo-29
+   MIT License, Copyright (c) jaykdoe, sinful_9361 (sinful)
+   Adapted: only the starfield, scrolling bottom to top; classes scoped with the bgstars- prefix.
+   Only stars with x <= 400px are kept, since the page is 390px wide. */
+
+.bgstars-s1 {
+  --bgstars-shadow: 367px 1734px #fff, 137px 1114px #fff, 34px 382px #fff, 169px 1907px #fff, 332px 1216px #fff, 80px 712px #fff, 326px 1605px #fff, 322px 1797px #fff, 62px 729px #fff, 126px 946px #fff, 300px 737px #fff, 89px 701px #fff, 24px 1152px #fff, 246px 1048px #fff, 45px 1116px #fff, 247px 786px #fff, 251px 458px #fff, 13px 1767px #fff, 22px 885px #fff, 374px 1309px #fff, 18px 1409px #fff, 264px 911px #fff, 123px 33px #fff, 183px 646px #fff, 73px 1201px #fff, 184px 1990px #fff, 323px 1035px #fff, 386px 575px #fff, 148px 687px #fff, 186px 1627px #fff, 171px 97px #fff, 330px 257px #fff, 383px 1428px #fff, 234px 1888px #fff, 53px 1990px #fff, 61px 223px #fff, 108px 172px #fff, 30px 1839px #fff, 273px 796px #fff, 44px 1908px #fff, 254px 293px #fff, 196px 316px #fff, 146px 1162px #fff, 313px 1341px #fff, 168px 1014px #fff, 345px 1355px #fff, 22px 719px #fff, 224px 323px #fff, 7px 271px #fff, 229px 613px #fff, 318px 256px #fff, 19px 422px #fff, 337px 1605px #fff, 29px 1148px #fff, 120px 1304px #fff, 234px 232px #fff, 300px 1629px #fff, 220px 1614px #fff, 325px 1070px #fff, 370px 204px #fff, 294px 1471px #fff, 42px 585px #fff, 97px 567px #fff, 110px 975px #fff, 11px 964px #fff, 21px 1728px #fff, 51px 198px #fff, 225px 920px #fff, 56px 495px #fff, 294px 196px #fff, 381px 1999px #fff, 332px 793px #fff, 233px 149px #fff, 315px 231px #fff, 284px 1781px #fff, 204px 1161px #fff, 44px 982px #fff, 115px 385px #fff, 192px 1513px #fff, 78px 1129px #fff, 94px 23px #fff, 243px 982px #fff, 43px 1972px #fff, 153px 526px #fff, 208px 1667px #fff, 186px 1794px #fff, 351px 1199px #fff, 75px 1240px #fff, 127px 1119px #fff, 276px 591px #fff, 171px 361px #fff, 94px 1480px #fff, 253px 1355px #fff, 275px 1847px #fff, 28px 1184px #fff, 10px 344px #fff, 292px 1328px #fff, 127px 1352px #fff, 284px 1829px #fff, 381px 820px #fff, 295px 756px #fff, 389px 616px #fff, 386px 1847px #fff, 357px 1071px #fff, 307px 1567px #fff, 310px 1323px #fff, 257px 632px #fff, 157px 346px #fff, 50px 1901px #fff, 215px 194px #fff, 367px 800px #fff, 122px 1371px #fff, 79px 482px #fff, 336px 1878px #fff, 188px 944px #fff, 325px 1259px #fff, 53px 1381px #fff, 107px 1670px #fff, 389px 802px #fff, 49px 392px #fff, 335px 1009px #fff, 52px 1190px #fff, 119px 1549px #fff, 2px 1709px #fff, 122px 387px #fff, 27px 1971px #fff, 319px 717px #fff, 386px 355px #fff, 273px 1538px #fff, 209px 307px #fff, 151px 555px #fff, 18px 992px #fff, 315px 1101px #fff, 194px 323px #fff, 40px 840px #fff, 176px 1753px #fff, 367px 1494px #fff, 363px 1111px #fff, 375px 617px #fff, 186px 1569px #fff, 320px 1853px #fff, 300px 539px #fff, 141px 281px #fff, 40px 456px #fff, 323px 778px #fff, 272px 443px #fff;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+  animation: bgstarsMove 50s linear infinite;
+}
+.bgstars-s1:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+}
+
+.bgstars-s2 {
+  --bgstars-shadow: 11px 1117px #fff, 270px 279px #fff, 258px 1404px #fff, 286px 561px #fff, 393px 1765px #fff, 147px 881px #fff, 218px 52px #fff, 171px 745px #fff, 137px 244px #fff, 137px 1080px #fff, 72px 1475px #fff, 102px 121px #fff, 97px 274px #fff, 52px 1872px #fff, 111px 289px #fff, 237px 557px #fff, 302px 252px #fff, 207px 748px #fff, 255px 1402px #fff, 74px 1772px #fff, 251px 1790px #fff, 96px 1688px #fff, 221px 1795px #fff, 274px 387px #fff, 174px 376px #fff, 70px 564px #fff, 43px 1870px #fff, 18px 1932px #fff, 355px 939px #fff, 383px 758px #fff, 379px 488px #fff, 214px 465px #fff, 179px 905px #fff, 6px 290px #fff, 87px 1459px #fff, 88px 1455px #fff, 54px 649px #fff, 181px 842px #fff, 3px 857px #fff, 292px 1201px #fff, 104px 1683px #fff, 314px 739px #fff;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+  animation: bgstarsMove 100s linear infinite;
+}
+.bgstars-s2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+}
+
+.bgstars-s3 {
+  --bgstars-shadow: 200px 981px #fff, 132px 1039px #fff, 254px 1072px #fff, 264px 297px #fff, 52px 1299px #fff, 235px 1082px #fff, 299px 1086px #fff, 250px 1415px #fff, 170px 1641px #fff, 56px 1129px #fff, 324px 1895px #fff, 326px 1605px #fff, 261px 969px #fff, 241px 217px #fff, 142px 967px #fff, 387px 896px #fff, 256px 1427px #fff, 345px 1769px #fff, 192px 1921px #fff, 287px 1272px #fff;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+  animation: bgstarsMove 150s linear infinite;
+}
+.bgstars-s3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: var(--bgstars-shadow);
+}
+
+@keyframes bgstarsMove {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-2000px); }
+}

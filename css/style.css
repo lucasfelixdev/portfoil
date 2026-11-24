@@ -1,0 +1,31 @@
+/* Bio Instagram - Lukas Felix */
+
+@font-face{font-family:'Funnel Display';font-weight:300;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Light.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:400;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Regular.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:500;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Medium.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:600;font-style:normal;src:url(../assets/fonts/FunnelDisplay-SemiBold.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:700;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Bold.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:800;font-style:normal;src:url(../assets/fonts/FunnelDisplay-ExtraBold.ttf) format('truetype')}
+
+body{margin:0;background:#010a2e}
+a{text-decoration:none;color:inherit}
+a[href]{transition:transform .2s ease}
+a[href]:hover{transform:scale(1.02)}
+
+.btn{position:relative;border-radius:999px;cursor:pointer;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease,background .2s ease}
+.btn:focus-visible{outline:none;box-shadow:0 0 0 2px #021244,0 0 0 4px rgba(56,168,255,0.6)}
+.btn-accent{background:radial-gradient(125% 130% at 50% -28%,rgba(255,255,255,0.45),rgba(255,255,255,0) 56%),linear-gradient(180deg,#3ba9ff 0%,#1aa3ff 56%,#0a6fd6 100%);border:1px solid #0a6fd6;color:#021244;box-shadow:0 1px rgba(255,255,255,0.55) inset,0 -1px rgba(0,0,0,0.28) inset,0 10px 26px -6px rgba(26,163,255,0.6),0 2px 8px -2px rgba(26,163,255,0.4)}
+.btn-accent:hover{transform:translateY(-1px) scale(1.02);filter:brightness(1.07);box-shadow:0 1px rgba(255,255,255,0.7) inset,0 -1px rgba(0,0,0,0.28) inset,0 18px 38px -8px rgba(26,163,255,0.65),0 6px 16px -4px rgba(26,163,255,0.45)}
+.btn-accent:active{transform:translateY(0) scale(0.985);box-shadow:0 2px 8px -2px rgba(0,0,0,0.4) inset,0 4px 12px -6px rgba(26,163,255,0.6)}
+.btn-glass{background:linear-gradient(180deg,rgba(56,168,255,0.22),rgba(2,18,68,0.55));backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(143,220,255,0.5);color:#cdeeff;box-shadow:0 1px rgba(255,255,255,0.35) inset,0 0 0 .5px rgba(56,168,255,0.35),0 4px 10px -4px rgba(1,6,24,0.6)}
+.btn-glass:hover{background:linear-gradient(180deg,rgba(56,168,255,0.34),rgba(2,18,68,0.45));transform:translateY(-1px);box-shadow:0 1px rgba(255,255,255,0.5) inset,0 0 0 .5px rgba(56,168,255,0.55),0 12px 24px -8px rgba(26,163,255,0.4)}
+.btn-glass:active{transform:translateY(0) scale(0.985);box-shadow:0 1px 3px rgba(1,6,24,0.6) inset,0 0 0 .5px rgba(56,168,255,0.4)}
+
+/* cards Portfólio / Instagram: cantos retos, raio vai para 8px no hover (linear) */
+.card-link{border-radius:0;transition:border-radius .3s linear}
+.card-link:hover{border-radius:8px}
+
+@media (prefers-reduced-motion: reduce){
+  .bgstars-s1,.bgstars-s2,.bgstars-s3{animation:none !important}
+  .card-link,a[href]{transition:none}
+}
