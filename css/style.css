@@ -25,7 +25,21 @@ a[href]:hover{transform:scale(1.02)}
 .card-link{border-radius:0;transition:border-radius .3s linear}
 .card-link:hover{border-radius:8px}
 
+/* entrada: os 4 cards descem do topo com blur, um apos o outro;
+   depois as linhas e os quadradinhos das arestas aparecem um a um.
+   --entrada-espera = quanto a pagina espera antes de comecar */
+:root{--entrada-espera:0.3s}
+@keyframes cardIn{
+  0%{opacity:0;transform:translateY(-24px);filter:blur(12px)}
+  99%{opacity:1;transform:translateY(0);filter:blur(0px)}
+  100%{opacity:1;transform:translateY(0);filter:none}
+}
+@keyframes decoIn{from{opacity:0}to{opacity:1}}
+.enter{opacity:0;animation:cardIn .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
+.deco{opacity:0;animation:decoIn .4s ease-out both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
+
 @media (prefers-reduced-motion: reduce){
   .bgstars-s1,.bgstars-s2,.bgstars-s3{animation:none !important}
   .card-link,a[href]{transition:none}
+  .enter,.deco{opacity:1;animation:none;filter:none;transform:none}
 }
