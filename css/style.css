@@ -1,11 +1,9 @@
 /* Bio Instagram - Lukas Felix */
 
-@font-face{font-family:'Funnel Display';font-weight:300;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Light.ttf) format('truetype')}
-@font-face{font-family:'Funnel Display';font-weight:400;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Regular.ttf) format('truetype')}
-@font-face{font-family:'Funnel Display';font-weight:500;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Medium.ttf) format('truetype')}
-@font-face{font-family:'Funnel Display';font-weight:600;font-style:normal;src:url(../assets/fonts/FunnelDisplay-SemiBold.ttf) format('truetype')}
-@font-face{font-family:'Funnel Display';font-weight:700;font-style:normal;src:url(../assets/fonts/FunnelDisplay-Bold.ttf) format('truetype')}
-@font-face{font-family:'Funnel Display';font-weight:800;font-style:normal;src:url(../assets/fonts/FunnelDisplay-ExtraBold.ttf) format('truetype')}
+@font-face{font-family:'Funnel Display';font-weight:300;font-style:normal;font-display:swap;src:url(../assets/fonts/FunnelDisplay-Light.woff2) format('woff2')}
+@font-face{font-family:'Funnel Display';font-weight:400;font-style:normal;font-display:swap;src:url(../assets/fonts/FunnelDisplay-Regular.woff2) format('woff2')}
+@font-face{font-family:'Funnel Display';font-weight:600;font-style:normal;font-display:swap;src:url(../assets/fonts/FunnelDisplay-SemiBold.woff2) format('woff2')}
+@font-face{font-family:'Funnel Display';font-weight:800;font-style:normal;font-display:swap;src:url(../assets/fonts/FunnelDisplay-ExtraBold.woff2) format('woff2')}
 
 body{margin:0;background:#010a2e}
 a{text-decoration:none;color:inherit}
@@ -35,11 +33,13 @@ a[href]:hover{transform:scale(1.02)}
   100%{opacity:1;transform:translateY(0);filter:none}
 }
 @keyframes decoIn{from{opacity:0}to{opacity:1}}
-.enter{opacity:0;animation:cardIn .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
-.deco{opacity:0;animation:decoIn .4s ease-out both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
+/* sem JS nada fica escondido; com JS, espera o .pronto para animar */
+.js .enter,.js .deco{opacity:0}
+.pronto .enter{animation:cardIn .6s cubic-bezier(.22,.8,.3,1) both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
+.pronto .deco{animation:decoIn .4s ease-out both;animation-delay:calc(var(--entrada-espera) + var(--d,0s))}
 
 @media (prefers-reduced-motion: reduce){
   .bgstars-s1,.bgstars-s2,.bgstars-s3{animation:none !important}
   .card-link,a[href]{transition:none}
-  .enter,.deco{opacity:1;animation:none;filter:none;transform:none}
+  .js .enter,.js .deco{opacity:1;animation:none;filter:none;transform:none}
 }
